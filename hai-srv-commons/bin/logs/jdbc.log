@@ -1,5 +1,0 @@
-2014-03-11 10:21:09,510 DEBUG - {conn-100000} Connection [java.sql.Connection]
-2014-03-11 10:21:09,541 DEBUG - {conn-100000} Preparing Statement:        select *     from enums t                        order by t.clazz    [java.sql.Connection]
-2014-03-11 10:21:09,650 DEBUG - {pstm-100001} Executing Statement:        select *     from enums t                        order by t.clazz    [java.sql.PreparedStatement]
-2014-03-11 10:21:09,650 DEBUG - {pstm-100001} Parameters: [] [java.sql.PreparedStatement]
-2014-03-11 10:21:09,650 DEBUG - {pstm-100001} Types: [] [java.sql.PreparedStatement]
