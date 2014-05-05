@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="specification">
+
+	<resultMap id="resultMap" class="com.haiegoo.shopping.model.product.Specification">
+		<result column="id" property="id" jdbcType="INTEGER" />
+		<result column="pid" property="pid" jdbcType="INTEGER" />
+		<result column="path" property="path" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="has_image" property="hasImage" jdbcType="TINYINT" />
+		<result column="cate_path" property="catePath" jdbcType="VARCHAR" />
+		<result column="sort" property="sort" jdbcType="INTEGER" />
+	</resultMap>
+
+	<cacheModel id="cacheSpecification" type="MEMCACHED" readOnly="true" serialize="false">
+		<flushInterval minutes="30" />
+		<flushOnExecute statement="specification.addSpecification" />
+		<flushOnExecute statement="specification.editSpecification" />
+		<flushOnExecute statement="specification.delSpecification" />
+	</cacheModel>
+
+
+	<select id="getSpecification" resultMap="resultMap" cacheModel="cacheSpecification">
+		select * from specification
+		<dynamic prepend="where">
+			<isNotEmpty prepend="and" property="id">
+				id =#id#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="pid">
+				pid =#pid#
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="path">
+				path like
+				CONCAT(#path:VARCHAR#,'%')
+			</isNotEmpty>
+		</dynamic>
+		order by cate_path, sort
+	</select>
+
+	<delete id="delSpecification">
+		delete from specification where concat(path,'/') like
+		concat(#value:VARCHAR#,'/%')
+	</delete>
+
+	<insert id="addSpecification" parameterClass="com.haiegoo.shopping.model.product.Specification">
+		insert into specification
+		<dynamic prepend="(">
+			<isNotNull prepend="," property="pid">
+				pid
+			</isNotNull>
+			<isNotNull prepend="," property="path">
+				path
+			</isNotNull>
+			<isNotNull prepend="," property="name">
+				name
+			</isNotNull>
+			<isNotNull prepend="," property="hasImage">
+				has_image
+			</isNotNull>
+			<isNotNull prepend="," property="catePath">
+				cate_path
+			</isNotNull>
+			<isNotNull prepend="," property="sort">
+				sort
+			</isNotNull>
+			)
+		</dynamic>
+		values
+		<dynamic prepend="(">
+			<isNotNull prepend="," property="pid">
+				#pid:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="path">
+				#path:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="name">
+				#name:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="hasImage">
+				#hasImage:TINYINT#
+			</isNotNull>
+			<isNotNull prepend="," property="catePath">
+				#catePath:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="sort">
+				#sort:INTEGER#
+			</isNotNull>
+			)
+		</dynamic>
+		<selectKey resultClass="java.lang.Integer" keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="editSpecification" parameterClass="com.haiegoo.shopping.model.product.Specification">
+		update specification
+		<dynamic prepend="set">
+			<isNotNull prepend="," property="pid">
+				pid = #pid:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="path">
+				path = #path:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="name">
+				name = #name:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="hasImage">
+				has_image = #hasImage:TINYINT#
+			</isNotNull>
+			<isNotNull prepend="," property="catePath">
+				cate_path = #catePath:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="sort">
+				sort = #sort:INTEGER#
+			</isNotNull>
+		</dynamic>
+		where id = #id:INTEGER#
+	</update>
+
+</sqlMap>

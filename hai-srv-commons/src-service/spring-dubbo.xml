@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+	
+	<!-- =========================dubbo信息配置======================== -->	
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="hai-srv-commons" owner="linpn" />
+
+	<!-- 注册中心 -->
+	<dubbo:registry address="${dubbo.registry.address}" file="${user.dir}/logs/dubbo-registry.cache"/>
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" serialization="java" accesslog="true"/>
+	
+	<!-- 服务提供方缺省配置 -->
+	<dubbo:provider timeout="10000" register="${dubbo.provider.register}" />
+	
+	
+	
+	<!-- ===================================本系统提供以下服务 ================================= -->
+	
+	<!-- 枚举与参数 -->
+	<dubbo:service interface="com.haiegoo.commons.service.config.EnumsService" ref="enumsService" version="1.0" />
+		
+</beans>

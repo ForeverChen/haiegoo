@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+ 
+    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+	<dubbo:application name="haiegoo" owner="linpn" />
+ 
+	<!-- 注册中心 -->
+	<dubbo:registry address="${dubbo.registry.address}" file="${user.dir}/.dubbo/dubbo-registry-haiegoo-consumer.cache"/>
+
+	<!-- 服务消费方缺省配置 -->
+	<dubbo:consumer timeout="10000" check="false" />
+    
+   
+	<!-- ===============================消费hai-srv-ucenter服务============================== -->
+	
+	<!-- 用户服务 -->
+	<dubbo:reference id="userService" interface="com.haiegoo.ucenter.service.user.UserService" version="1.0" /> <!-- url="dubbo://127.0.0.1:21880" -->
+	
+	
+	<!-- ===============================消费hai-srv-commons服务============================== -->
+	
+	<!-- 系统枚举 -->
+	<dubbo:reference id="enumsService" interface="com.haiegoo.commons.service.config.EnumsService" version="1.0" /> <!-- url="dubbo://127.0.0.1:20880" -->
+
+	
+</beans>

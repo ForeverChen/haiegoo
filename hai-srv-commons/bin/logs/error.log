@@ -1,0 +1,83 @@
+2014-04-25 15:37:53,683 ERROR -  [DUBBO] Error creating bean with name 'enumsService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlMapClientCommons' defined in file [D:\Java\workspaces\eclipse-jee\haiegoo\trunk\hai-srv-commons\target\classes\spring-dao.xml]: Cannot create inner bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#1959e6e8' of type [org.springframework.orm.ibatis.SqlMapClientFactoryBean] while setting bean property 'sqlMapClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#1959e6e8' defined in file [D:\Java\workspaces\eclipse-jee\haiegoo\trunk\hai-srv-commons\target\classes\spring-dao.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [com/haiegoo/commons/dao/sqlmap-config.xml]; nested exception is com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/sqlMap'.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums', dubbo version: 2.4.10, current host: 127.0.0.1 [com.alibaba.dubbo.container.Main]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enumsService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlMapClientCommons' defined in file [D:\Java\workspaces\eclipse-jee\haiegoo\trunk\hai-srv-commons\target\classes\spring-dao.xml]: Cannot create inner bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#1959e6e8' of type [org.springframework.orm.ibatis.SqlMapClientFactoryBean] while setting bean property 'sqlMapClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#1959e6e8' defined in file [D:\Java\workspaces\eclipse-jee\haiegoo\trunk\hai-srv-commons\target\classes\spring-dao.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [com/haiegoo/commons/dao/sqlmap-config.xml]; nested exception is com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/sqlMap'.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:607)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:472)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlMapClientCommons' defined in file [D:\Java\workspaces\eclipse-jee\haiegoo\trunk\hai-srv-commons\target\classes\spring-dao.xml]: Cannot create inner bean 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#1959e6e8' of type [org.springframework.orm.ibatis.SqlMapClientFactoryBean] while setting bean property 'sqlMapClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#1959e6e8' defined in file [D:\Java\workspaces\eclipse-jee\haiegoo\trunk\hai-srv-commons\target\classes\spring-dao.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [com/haiegoo/commons/dao/sqlmap-config.xml]; nested exception is com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/sqlMap'.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:282)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:416)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:92)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:303)
+	... 14 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.orm.ibatis.SqlMapClientFactoryBean#1959e6e8' defined in file [D:\Java\workspaces\eclipse-jee\haiegoo\trunk\hai-srv-commons\target\classes\spring-dao.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [com/haiegoo/commons/dao/sqlmap-config.xml]; nested exception is com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/sqlMap'.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:271)
+	... 29 more
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [com/haiegoo/commons/dao/sqlmap-config.xml]; nested exception is com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/sqlMap'.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at org.springframework.orm.ibatis.SqlMapClientFactoryBean.buildSqlMapClient(SqlMapClientFactoryBean.java:341)
+	at org.springframework.orm.ibatis.SqlMapClientFactoryBean.afterPropertiesSet(SqlMapClientFactoryBean.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 32 more
+Caused by: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/sqlMap'.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:62)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapConfigParser.parse(SqlMapConfigParser.java:62)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapConfigParser.parse(SqlMapConfigParser.java:55)
+	at org.springframework.orm.ibatis.SqlMapClientFactoryBean.buildSqlMapClient(SqlMapClientFactoryBean.java:338)
+	... 35 more
+Caused by: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/sqlMap'.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at com.ibatis.common.xml.NodeletParser.processNodelet(NodeletParser.java:123)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:84)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:102)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:72)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:60)
+	... 38 more
+Caused by: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:62)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapParser.parse(SqlMapParser.java:44)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapConfigParser$10.process(SqlMapConfigParser.java:257)
+	at com.ibatis.common.xml.NodeletParser.processNodelet(NodeletParser.java:121)
+	... 42 more
+Caused by: java.lang.RuntimeException: Error parsing XPath '/sqlMap/resultMap/result'.  Cause: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at com.ibatis.common.xml.NodeletParser.processNodelet(NodeletParser.java:123)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:84)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:102)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:102)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:72)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:60)
+	... 45 more
+Caused by: com.ibatis.common.beans.ProbeException: There is no WRITEABLE property named 'value' in class 'com.haiegoo.commons.model.config.Enums'
+	at com.ibatis.common.beans.ClassInfo.getSetterType(ClassInfo.java:405)
+	at com.ibatis.common.beans.GenericProbe.getClassPropertyTypeForSetter(GenericProbe.java:251)
+	at com.ibatis.common.beans.GenericProbe.getPropertyTypeForSetter(GenericProbe.java:135)
+	at com.ibatis.sqlmap.engine.config.SqlMapConfiguration.resolveTypeHandler(SqlMapConfiguration.java:195)
+	at com.ibatis.sqlmap.engine.config.ResultMapConfig.addResultMapping(ResultMapConfig.java:116)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapParser$14.process(SqlMapParser.java:279)
+	at com.ibatis.common.xml.NodeletParser.processNodelet(NodeletParser.java:121)
+	... 50 more

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="product">
+
+	<resultMap id="resultMap" class="com.haiegoo.shopping.model.product.Product">
+		<result column="id" property="id" jdbcType="BIGINT" />
+		<result column="brand_id" property="brandId" jdbcType="INTEGER" />
+		<result column="cate_id" property="cateId" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="sub_name" property="subName" jdbcType="VARCHAR" />
+		<result column="image" property="image" jdbcType="VARCHAR" />
+		<result column="price" property="price" jdbcType="DECIMAL" />
+		<result column="weight" property="weight" jdbcType="DECIMAL" />
+		<result column="stock_number" property="stockNumber" jdbcType="INTEGER" />
+		<result column="min_buy_number" property="minBuyNumber" jdbcType="INTEGER" />
+		<result column="max_buy_number" property="maxBuyNumber" jdbcType="INTEGER" />
+		<result column="sell_count" property="sellCount" jdbcType="BIGINT" />
+		<result column="unit" property="unit" jdbcType="VARCHAR" />
+		<result column="pc_desc" property="pcDesc" jdbcType="VARCHAR" />
+		<result column="mobile_desc" property="mobileDesc" jdbcType="VARCHAR" />
+		<result column="link_comment" property="linkComment" jdbcType="BIGINT" />
+		<result column="seller_note" property="sellerNote" jdbcType="VARCHAR" />
+		<result column="seo_title" property="seoTitle" jdbcType="VARCHAR" />
+		<result column="seo_keywords" property="seoKeywords" jdbcType="VARCHAR" />
+		<result column="seo_description" property="seoDescription" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="delete_time" property="deleteTime" jdbcType="TIMESTAMP" />
+		<result column="publish_time" property="publishTime" jdbcType="TIMESTAMP" />
+		<result column="up_shelf_time" property="upShelfTime" jdbcType="TIMESTAMP" />
+		<result column="off_shelf_time" property="offShelfTime" jdbcType="TIMESTAMP" />
+		<result column="sale_state" property="saleState" jdbcType="TINYINT" />
+		<result column="state" property="state" jdbcType="TINYINT" />
+	</resultMap>
+	
+	<cacheModel id="cacheProduct" type="MEMCACHED" readOnly="true" serialize="false">
+  		<flushInterval minutes="30"/>
+	  	<flushOnExecute statement="product.editProduct"/>
+	  	<flushOnExecute statement="product.addProduct"/>
+	</cacheModel>
+	
+	
+	<!-- 查询条件 -->
+	<sql id="select_where_clause">
+		<dynamic prepend="where">
+			<isNotEmpty prepend="AND" property="id">
+				id = #id#
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="name">
+				name like concat(#name#,'%')
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="brandId">
+				brand_id = #brandId#
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="cateId">
+				cate_id = #cateId#
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="saleState">
+				sale_state in ($saleState$)
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="state">
+				state = #state#
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="searchKey">
+				(id=#searchKey:VARCHAR# or name like concat(#searchKey#,'%'))
+			</isNotEmpty>
+		</dynamic>
+	</sql>
+
+	<!-- 排序以及分页 -->
+	<sql id="select_sort_limit_clause">
+		<dynamic prepend="order by">
+			<isNotEmpty property="sort">
+				$sort$
+			</isNotEmpty>
+			<isEmpty property="sort">
+				create_time DESC
+			</isEmpty>
+		</dynamic>
+		<dynamic prepend="limit">
+			<isNotNull property="start">
+				$start$,
+				<isNotNull property="limit">
+					$limit$
+				</isNotNull>
+				<isNull property="limit">
+					18446744073709551615
+				</isNull>
+			</isNotNull>
+		</dynamic>
+	</sql>
+
+
+	<select id="getProduct" resultMap="resultMap">
+		select id, brand_id, cate_id, name, sub_name, image, price, weight, 
+			stock_number, min_buy_number, max_buy_number, sell_count, unit, pc_desc, mobile_desc, link_comment,
+			seller_note, seo_title, seo_keywords, seo_description, create_time, update_time, delete_time,
+			publish_time, up_shelf_time, off_shelf_time, sale_state, state
+		from product
+		<include refid="select_where_clause" />
+		<include refid="select_sort_limit_clause"/>
+	</select>
+	
+	<select id="getProductCount" resultClass="long">
+		select count(*)
+		from product
+		<include refid="select_where_clause" />
+	</select>
+
+	<insert id="addProduct" parameterClass="com.haiegoo.shopping.model.product.Product">
+		insert into product
+		<dynamic prepend="(">
+			<isNotNull prepend="," property="brandId">
+				brand_id
+			</isNotNull>
+			<isNotNull prepend="," property="cateId">
+				cate_id
+			</isNotNull>
+			<isNotNull prepend="," property="name">
+				name
+			</isNotNull>
+			<isNotNull prepend="," property="subName">
+				sub_name
+			</isNotNull>
+			<isNotNull prepend="," property="image">
+				image
+			</isNotNull>
+			<isNotNull prepend="," property="price">
+				price
+			</isNotNull>
+			<isNotNull prepend="," property="weight">
+				weight
+			</isNotNull>
+			<isNotNull prepend="," property="stockNumber">
+				stock_number
+			</isNotNull>
+			<isNotNull prepend="," property="minBuyNumber">
+				min_buy_number
+			</isNotNull>
+			<isNotNull prepend="," property="maxBuyNumber">
+				max_buy_number
+			</isNotNull>
+			<isNotNull prepend="," property="sellCount">
+				sell_count
+			</isNotNull>
+			<isNotNull prepend="," property="unit">
+				unit
+			</isNotNull>
+			<isNotNull prepend="," property="pcDesc">
+				pc_desc
+			</isNotNull>
+			<isNotNull prepend="," property="mobileDesc">
+				mobile_desc
+			</isNotNull>
+			<isNotNull prepend="," property="linkComment">
+				link_comment
+			</isNotNull>
+			<isNotNull prepend="," property="sellerNote">
+				seller_note
+			</isNotNull>
+			<isNotNull prepend="," property="seoTitle">
+				seo_title
+			</isNotNull>
+			<isNotNull prepend="," property="seoKeywords">
+				seo_keywords
+			</isNotNull>
+			<isNotNull prepend="," property="seoDescription">
+				seo_description
+			</isNotNull>
+			<isNotNull prepend="," property="createTime">
+				create_time
+			</isNotNull>
+			<isNotNull prepend="," property="updateTime">
+				update_time
+			</isNotNull>
+			<isNotNull prepend="," property="deleteTime">
+				delete_time
+			</isNotNull>
+			<isNotNull prepend="," property="publishTime">
+				publish_time
+			</isNotNull>
+			<isNotNull prepend="," property="upShelfTime">
+				up_shelf_time
+			</isNotNull>
+			<isNotNull prepend="," property="offShelfTime">
+				off_shelf_time
+			</isNotNull>
+			<isNotNull prepend="," property="saleState">
+				sale_state
+			</isNotNull>
+			<isNotNull prepend="," property="state">
+				state
+			</isNotNull>
+			)
+		</dynamic>
+		values
+		<dynamic prepend="(">
+			<isNotNull prepend="," property="brandId">
+				#brandId:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="cateId">
+				#cateId:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="name">
+				#name:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="subName">
+				#subName:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="image">
+				#image:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="price">
+				#price:DECIMAL#
+			</isNotNull>
+			<isNotNull prepend="," property="weight">
+				#weight:DECIMAL#
+			</isNotNull>
+			<isNotNull prepend="," property="stockNumber">
+				#stockNumber:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="minBuyNumber">
+				#minBuyNumber:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="maxBuyNumber">
+				#maxBuyNumber:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="sellCount">
+				#sellCount:BIGINT#
+			</isNotNull>
+			<isNotNull prepend="," property="unit">
+				#unit:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="pcDesc">
+				#pcDesc:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="mobileDesc">
+				#mobileDesc:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="linkComment">
+				#linkComment:BIGINT#
+			</isNotNull>
+			<isNotNull prepend="," property="sellerNote">
+				#sellerNote:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="seoTitle">
+				#seoTitle:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="seoKeywords">
+				#seoKeywords:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="seoDescription">
+				#seoDescription:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="createTime">
+				#createTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="updateTime">
+				#updateTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="deleteTime">
+				#deleteTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="publishTime">
+				#publishTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="upShelfTime">
+				#upShelfTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="offShelfTime">
+				#offShelfTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="saleState">
+				#saleState:TINYINT#
+			</isNotNull>
+			<isNotNull prepend="," property="state">
+				#state:TINYINT#
+			</isNotNull>
+			)
+		</dynamic>
+		<selectKey resultClass="java.lang.Long" keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="editProduct" parameterClass="com.haiegoo.shopping.model.product.Product">
+		update product
+		<dynamic prepend="set">
+			<isNotNull prepend="," property="brandId">
+				brand_id = #brandId:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="cateId">
+				cate_id = #cateId:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="name">
+				name = #name:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="subName">
+				sub_name = #subName:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="image">
+				image = #image:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="price">
+				price = #price:DECIMAL#
+			</isNotNull>
+			<isNotNull prepend="," property="weight">
+				weight = #weight:DECIMAL#
+			</isNotNull>
+			<isNotNull prepend="," property="stockNumber">
+				stock_number = #stockNumber:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="minBuyNumber">
+				min_buy_number = #minBuyNumber:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="maxBuyNumber">
+				max_buy_number = #maxBuyNumber:INTEGER#
+			</isNotNull>
+			<isNotNull prepend="," property="sellCount">
+				sell_count = #sellCount:BIGINT#
+			</isNotNull>
+			<isNotNull prepend="," property="unit">
+				unit = #unit:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="pcDesc">
+				pc_desc = #pcDesc:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="mobileDesc">
+				mobile_desc = #mobileDesc:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="linkComment">
+				link_comment = #linkComment:BIGINT#
+			</isNotNull>
+			<isNotNull prepend="," property="sellerNote">
+				seller_note = #sellerNote:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="seoTitle">
+				seo_title = #seoTitle:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="seoKeywords">
+				seo_keywords = #seoKeywords:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="seoDescription">
+				seo_description = #seoDescription:VARCHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="createTime">
+				create_time = #createTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="updateTime">
+				update_time = #updateTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="deleteTime">
+				delete_time = #deleteTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="publishTime">
+				publish_time = #publishTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="upShelfTime">
+				up_shelf_time = #upShelfTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="offShelfTime">
+				off_shelf_time = #offShelfTime:TIMESTAMP#
+			</isNotNull>
+			<isNotNull prepend="," property="saleState">
+				sale_state = #saleState:TINYINT#
+			</isNotNull>
+			<isNotNull prepend="," property="state">
+				state = #state:TINYINT#
+			</isNotNull>
+		</dynamic>
+		where id = #id:BIGINT#
+	</update>
+
+</sqlMap>

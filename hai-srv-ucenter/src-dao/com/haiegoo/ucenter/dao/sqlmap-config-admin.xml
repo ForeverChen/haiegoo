@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"  
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+	<!-- useStatementNamespaces 是否启用名称空间 --> 
+	<!-- cacheModelsEnabled 是否启用缓存机制 -->  
+	<!-- lazyLoadingEnabled 是否启用延迟加载机制 -->  
+	<!-- enhancementEnabled 是否启用字节码增强机制 -->  
+	<!-- errorTracingEnabled 是否启用错误处理机制 -->	
+	<settings 
+		useStatementNamespaces="true" 
+		cacheModelsEnabled ="true" 
+		lazyLoadingEnabled="false" 
+		enhancementEnabled="true"  
+		errorTracingEnabled="true"
+	/>
+	
+	<!-- Memcached缓存 -->
+	<typeAlias alias="MEMCACHED" type="com.haiegoo.framework.ibatis.cache.MemcachedController"/>
+	
+	<sqlMap resource="com/haiegoo/ucenter/dao/sqlmap/admin/admin.sqlmap.xml"/>
+	<sqlMap resource="com/haiegoo/ucenter/dao/sqlmap/admin/role.sqlmap.xml"/>
+	<sqlMap resource="com/haiegoo/ucenter/dao/sqlmap/admin/module.sqlmap.xml"/>
+	<sqlMap resource="com/haiegoo/ucenter/dao/sqlmap/admin/admin_role.sqlmap.xml"/>
+	<sqlMap resource="com/haiegoo/ucenter/dao/sqlmap/admin/role_module.sqlmap.xml"/>
+	
+</sqlMapConfig>

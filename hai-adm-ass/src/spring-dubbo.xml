@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+ 
+    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+	<dubbo:application name="hai-adm-ass" owner="linpn" />
+ 
+	<!-- 注册中心 -->
+	<dubbo:registry address="${dubbo.registry.address}" file="${user.dir}/.dubbo/dubbo-registry-hai-adm-ass-consumer.cache"/>
+
+	<!-- 服务消费方缺省配置 -->
+	<dubbo:consumer timeout="10000" check="false" />
+    
+    
+	<!-- ===============================消费hai-srv-ucenter服务============================== -->
+	
+	<!-- 后台用户 -->
+	<dubbo:reference id="adminService" interface="com.haiegoo.ucenter.service.admin.AdminService" version="1.0" /> <!-- url="dubbo://127.0.0.1:21880" -->
+	
+	<!-- 角色权限 -->
+	<dubbo:reference id="roleService" interface="com.haiegoo.ucenter.service.admin.RoleService" version="1.0" />
+	
+	<!-- 应用模块-->
+	<dubbo:reference id="moduleService" interface="com.haiegoo.ucenter.service.admin.ModuleService" version="1.0" />
+	
+	<!-- 前台用户 -->
+	<dubbo:reference id="userService" interface="com.haiegoo.ucenter.service.user.UserService" version="1.0" />
+	
+	<!-- 行政区划 -->
+	<dubbo:reference id="cityService" interface="com.haiegoo.ucenter.service.user.CityService" version="1.0" />
+	
+	
+	<!-- ===============================消费hai-srv-commons服务============================== -->
+	
+	<!-- 系统与参数 -->
+	<dubbo:reference id="enumsService" interface="com.haiegoo.commons.service.config.EnumsService" version="1.0" /> <!-- url="dubbo://127.0.0.1:20880" -->
+	
+	
+</beans>

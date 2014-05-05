@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="role" >
+
+  <resultMap id="resultMap" class="com.haiegoo.ucenter.model.admin.Role" >
+    <result column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="pid" property="pid" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+    <result column="leaf" property="leaf" jdbcType="TINYINT" />
+    <result column="{roleId=role_id}" property="modules" select="module.getModule" />
+  </resultMap>
+  
+  <cacheModel id="cacheRole" type="MEMCACHED" readOnly="true" serialize="false">
+  	<flushInterval minutes="30"/>
+  	<flushOnExecute statement="role.addRole"/>
+  	<flushOnExecute statement="role.editRole"/>
+  	<flushOnExecute statement="role.delRole"/>
+  	<flushOnExecute statement="module.addModule"/>
+  	<flushOnExecute statement="module.editModule"/>
+  	<flushOnExecute statement="module.delModule"/>
+  	<flushOnExecute statement="admin_role.addAdminRole"/>
+  	<flushOnExecute statement="admin_role.delAdminRole"/>
+  	<flushOnExecute statement="role_module.addRoleModule"/>
+  	<flushOnExecute statement="role_module.delRoleModule"/>
+  </cacheModel>
+  
+  <select id="getRole" resultMap="resultMap" cacheModel="cacheRole">
+    select role_id, pid, name, type, description, sort, leaf
+    from role
+    <dynamic prepend="where">
+		<isNotEmpty prepend="AND" property="roleId">
+			role_id = #roleId:INTEGER#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="pid">
+			pid = #pid:INTEGER#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="name">
+			name = #name:VARCHAR#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="leaf">
+			leaf = #leaf:TINYINT#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="userId">
+			role_id in (select role_id from admin_role where user_id = #userId:INTEGER#)
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="moduleId">
+			role_id in (select role_id from role_module where module_id = #moduleId:INTEGER#)
+		</isNotEmpty>
+	</dynamic>
+	<dynamic prepend="order by" >
+      <isNotEmpty property="sort" >
+        $sort$
+      </isNotEmpty>
+	  <isEmpty property="sort" >
+	    sort asc
+	  </isEmpty>
+    </dynamic>
+  </select>
+  
+  <delete id="delRole" >
+    delete from role
+    where role_id in
+	<iterate property="roleIds" open="(" close=")" conjunction=",">
+		#roleIds[]:INTEGER# 
+	</iterate>
+  </delete>
+  
+  <insert id="addRole" parameterClass="com.haiegoo.ucenter.model.admin.Role" >
+    insert into role
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="pid" >
+        pid
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        name
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        type
+      </isNotNull>
+      <isNotNull prepend="," property="description" >
+        description
+      </isNotNull>
+      <isNotNull prepend="," property="sort" >
+        sort
+      </isNotNull>
+      <isNotNull prepend="," property="leaf" >
+        leaf
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="pid" >
+        #pid:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        #type:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="description" >
+        #description:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="sort" >
+        #sort:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="leaf" >
+        #leaf:TINYINT#
+      </isNotNull>
+      )
+    </dynamic>
+    <selectKey resultClass="java.lang.Integer" keyProperty="roleId" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+  
+  <update id="editRole" parameterClass="com.haiegoo.ucenter.model.admin.Role" >
+    update role
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="pid" >
+        pid = #pid:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="name" >
+        name = #name:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        type = #type:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="description" >
+        description = #description:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="sort" >
+        sort = #sort:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="leaf" >
+        leaf = #leaf:TINYINT#
+      </isNotNull>
+    </dynamic>
+    where role_id = #roleId:INTEGER#
+  </update>
+  
+</sqlMap>

@@ -1,0 +1,311 @@
+2014-04-21 09:17:12,842 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:25)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:171)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:200)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:12,844 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:25)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:171)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:200)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:12,892 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:25)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:171)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:200)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:12,891 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:25)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:171)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:200)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:13,008 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:13,009 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.flush0(AbstractNioSession.java:284)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.closeChannel(NioTCPSession.java:314)
+	at com.google.code.yanf4j.core.impl.AbstractSession.close(AbstractSession.java:286)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:165)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,948 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,949 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,949 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-21 09:17:14,966 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,969 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,966 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-21 09:17:14,972 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,974 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,972 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-21 09:17:14,976 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,977 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:14,976 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-21 09:17:15,012 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:15,012 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-21 09:17:15,012 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-21 16:14:20,638 ERROR -  [DUBBO] Got unchecked and undeclared exception which called by 10.14.21.17. service: com.haiegoo.shopping.service.product.SpecificationService, method: addSpecification, exception: com.alibaba.dubbo.rpc.RpcException: 同一级别下的规格名称重复, dubbo version: 2.4.10, current host: 127.0.0.1 [com.alibaba.dubbo.rpc.filter.ExceptionFilter]
+com.alibaba.dubbo.rpc.RpcException: 同一级别下的规格名称重复
+	at com.haiegoo.shopping.service.product.impl.SpecificationServiceImpl.addSpecification(SpecificationServiceImpl.java:86)
+	at com.alibaba.dubbo.common.bytecode.Wrapper6.invokeMethod(Wrapper6.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.AccessLogFilter.invoke(AccessLogFilter.java:199)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispather.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.springframework.dao.DuplicateKeyException: SqlMapClient operation; SQL [];   
+--- The error occurred while applying a parameter map.  
+--- Check the Specification.addSpecification-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '0-bbb' for key 'uqe_pid_name'; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred while applying a parameter map.  
+--- Check the Specification.addSpecification-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '0-bbb' for key 'uqe_pid_name'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:241)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:203)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.insert(SqlMapClientTemplate.java:364)
+	at com.haiegoo.shopping.service.product.impl.SpecificationServiceImpl.addSpecification(SpecificationServiceImpl.java:71)
+	... 29 more
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred while applying a parameter map.  
+--- Check the Specification.addSpecification-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '0-bbb' for key 'uqe_pid_name'
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.insert(SqlMapExecutorDelegate.java:393)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.insert(SqlMapSessionImpl.java:82)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate$8.doInSqlMapClient(SqlMapClientTemplate.java:366)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:200)
+	... 31 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '0-bbb' for key 'uqe_pid_name'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1041)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4237)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4169)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2617)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2778)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2825)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2156)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper.execute(PreparedStatementWrapper.java:822)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.ibatis.common.jdbc.logging.PreparedStatementLogProxy.invoke(PreparedStatementLogProxy.java:62)
+	at com.sun.proxy.$Proxy13.execute(Unknown Source)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 35 more
+2014-04-21 17:09:43,367 ERROR -  [DUBBO] Got unchecked and undeclared exception which called by 10.14.21.17. service: com.haiegoo.shopping.service.product.SpecificationService, method: addSpecification, exception: com.alibaba.dubbo.rpc.RpcException: 同一级别下的规格名称重复, dubbo version: 2.4.10, current host: 127.0.0.1 [com.alibaba.dubbo.rpc.filter.ExceptionFilter]
+com.alibaba.dubbo.rpc.RpcException: 同一级别下的规格名称重复
+	at com.haiegoo.shopping.service.product.impl.SpecificationServiceImpl.addSpecification(SpecificationServiceImpl.java:86)
+	at com.alibaba.dubbo.common.bytecode.Wrapper6.invokeMethod(Wrapper6.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.AccessLogFilter.invoke(AccessLogFilter.java:199)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispather.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.springframework.dao.DuplicateKeyException: SqlMapClient operation; SQL [];   
+--- The error occurred while applying a parameter map.  
+--- Check the Specification.addSpecification-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '19-f3' for key 'uqe_pid_name'; nested exception is com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred while applying a parameter map.  
+--- Check the Specification.addSpecification-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '19-f3' for key 'uqe_pid_name'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:241)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:203)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.insert(SqlMapClientTemplate.java:364)
+	at com.haiegoo.shopping.service.product.impl.SpecificationServiceImpl.addSpecification(SpecificationServiceImpl.java:71)
+	... 29 more
+Caused by: com.ibatis.common.jdbc.exception.NestedSQLException:   
+--- The error occurred while applying a parameter map.  
+--- Check the Specification.addSpecification-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '19-f3' for key 'uqe_pid_name'
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:107)
+	at com.ibatis.sqlmap.engine.impl.SqlMapExecutorDelegate.insert(SqlMapExecutorDelegate.java:393)
+	at com.ibatis.sqlmap.engine.impl.SqlMapSessionImpl.insert(SqlMapSessionImpl.java:82)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate$8.doInSqlMapClient(SqlMapClientTemplate.java:366)
+	at org.springframework.orm.ibatis.SqlMapClientTemplate.execute(SqlMapClientTemplate.java:200)
+	... 31 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '19-f3' for key 'uqe_pid_name'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1041)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4237)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4169)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2617)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2778)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2825)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2156)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper.execute(PreparedStatementWrapper.java:822)
+	at sun.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.ibatis.common.jdbc.logging.PreparedStatementLogProxy.invoke(PreparedStatementLogProxy.java:62)
+	at com.sun.proxy.$Proxy13.execute(Unknown Source)
+	at com.ibatis.sqlmap.engine.execution.SqlExecutor.executeUpdate(SqlExecutor.java:80)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.sqlExecuteUpdate(MappedStatement.java:216)
+	at com.ibatis.sqlmap.engine.mapping.statement.MappedStatement.executeUpdate(MappedStatement.java:94)
+	... 35 more

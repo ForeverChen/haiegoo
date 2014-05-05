@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="enums" >
+
+  <resultMap id="resultMap" class="com.haiegoo.commons.model.config.Enums" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="clazz" property="clazz" jdbcType="VARCHAR" />
+    <result column="key" property="key" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="INTEGER" />
+    <result column="text" property="text" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <cacheModel id="cacheEnums" type="MEMCACHED" readOnly="true" serialize="false">
+  	<flushInterval minutes="30"/>
+  	<flushOnExecute statement="enums.addEnums"/>
+  	<flushOnExecute statement="enums.editEnums"/>
+  	<flushOnExecute statement="enums.delEnums"/>
+  </cacheModel>
+  
+  
+  <select id="getEnums" resultMap="resultMap" cacheModel="cacheEnums" > 
+    select *
+    from enums t
+    <dynamic prepend="where">
+		<isNotEmpty prepend="AND" property="id">
+			id = #id:INTEGER#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="clazz">
+			clazz = #clazz:VARCHAR#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="key">
+			t.key = #key:VARCHAR#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="code">
+			code = #code:INTEGER#
+		</isNotEmpty>
+		<isNotEmpty prepend="AND" property="text">
+			text = #text:VARCHAR#
+		</isNotEmpty>
+	</dynamic>
+	order by t.clazz, t.code
+  </select>
+  
+  <delete id="delEnums" >
+    delete from enums
+    where id in
+	<iterate open="(" close=")" conjunction=",">
+		#[]:INTEGER# 
+	</iterate>
+  </delete>
+
+  <insert id="addEnums" parameterClass="com.haiegoo.commons.model.config.Enums" >
+    insert into enums
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="clazz" >
+        clazz
+      </isNotNull>
+      <isNotNull prepend="," property="key" >
+        enums.key
+      </isNotNull>
+      <isNotNull prepend="," property="code" >
+        code
+      </isNotNull>
+      <isNotNull prepend="," property="text" >
+        text
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="clazz" >
+        #clazz:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="key" >
+        #key:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="code" >
+        #code:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="text" >
+        #text:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+    <selectKey resultClass="java.lang.Integer" keyProperty="id" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+  
+  <update id="editEnums" parameterClass="com.haiegoo.commons.model.config.Enums" >
+    update enums
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="clazz" >
+        clazz = #clazz:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="key" >
+        enums.key = #key:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="code" >
+        code = #code:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="text" >
+        text = #text:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:INTEGER#
+  </update>
+  
+</sqlMap>

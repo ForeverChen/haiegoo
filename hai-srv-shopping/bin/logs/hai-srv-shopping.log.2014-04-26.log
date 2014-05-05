@@ -1,0 +1,308 @@
+2014-04-26 08:30:26,520 WARN -  [DUBBO] Close channel NettyChannel [channel=[id: 0x48ec77cb, /10.14.21.17:55048 => /10.14.21.17:22880]], because heartbeat read idle time out: 180000ms, dubbo version: 2.4.10, current host: 127.0.0.1 [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask]
+2014-04-26 08:30:26,525 INFO -  [DUBBO] Close netty channel [id: 0x48ec77cb, /10.14.21.17:55048 => /10.14.21.17:22880], dubbo version: 2.4.10, current host: 127.0.0.1 [com.alibaba.dubbo.remoting.transport.netty.NettyChannel]
+2014-04-26 08:30:26,524 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:25)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:171)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:200)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,673 INFO -  [DUBBO] disconected from /10.14.21.17:55048,url:dubbo://10.14.21.17:22880/com.haiegoo.shopping.service.product.ProductService?accesslog=true&anyhost=true&application=hai-srv-shopping&channel.readonly.sent=true&codec=dubbo&default.register=false&default.timeout=10000&dubbo=2.4.10&heartbeat=60000&interface=com.haiegoo.shopping.service.product.ProductService&methods=getProductCount,getProductList,editProduct,addProduct,upShelfProduct,delProduct,getProduct,recoveryProduct,offShelfProduct&owner=linpn&pid=9128&revision=1.0&serialization=java&side=provider&timestamp=1398419058486&version=1.0, dubbo version: 2.4.10, current host: 127.0.0.1 [com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol]
+2014-04-26 08:30:26,524 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:25)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:198)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:171)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:245)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:200)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,751 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.flush0(AbstractNioSession.java:284)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.closeChannel(NioTCPSession.java:314)
+	at com.google.code.yanf4j.core.impl.AbstractSession.close(AbstractSession.java:286)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:228)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,768 WARN - Remove a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:26,673 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.flush0(AbstractNioSession.java:284)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.closeChannel(NioTCPSession.java:314)
+	at com.google.code.yanf4j.core.impl.AbstractSession.close(AbstractSession.java:286)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.readFromBuffer(NioTCPSession.java:228)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onRead(AbstractNioSession.java:198)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:343)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchReadEvent(SocketChannelController.java:56)
+	at com.google.code.yanf4j.nio.impl.NioController.onRead(NioController.java:157)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:294)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,592 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,787 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.flush0(AbstractNioSession.java:284)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.closeChannel(NioTCPSession.java:314)
+	at com.google.code.yanf4j.core.impl.AbstractSession.close(AbstractSession.java:286)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:165)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,592 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,792 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.flush0(AbstractNioSession.java:284)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.closeChannel(NioTCPSession.java:314)
+	at com.google.code.yanf4j.core.impl.AbstractSession.close(AbstractSession.java:286)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:165)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,549 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,795 ERROR - XMemcached network layout exception [net.rubyeye.xmemcached.impl.MemcachedHandler]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:33)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:69)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:40)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:336)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.doRealWrite(AbstractNioSession.java:323)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.writeToChannel(NioTCPSession.java:84)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:112)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.flush0(AbstractNioSession.java:284)
+	at com.google.code.yanf4j.nio.impl.NioTCPSession.closeChannel(NioTCPSession.java:314)
+	at com.google.code.yanf4j.core.impl.AbstractSession.close(AbstractSession.java:286)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onWrite(AbstractNioSession.java:165)
+	at com.google.code.yanf4j.nio.impl.AbstractNioSession.onEvent(AbstractNioSession.java:340)
+	at com.google.code.yanf4j.nio.impl.SocketChannelController.dispatchWriteEvent(SocketChannelController.java:67)
+	at com.google.code.yanf4j.nio.impl.NioController.onWrite(NioController.java:168)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:283)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:26,786 WARN - Remove a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:26,815 WARN - Remove a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:26,840 WARN - Remove a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:26,842 WARN - Remove a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,808 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,809 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,809 WARN - Trying to connect to 122.224.171.132:11211 for 1 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,810 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,815 WARN - Trying to connect to 122.224.171.132:11211 for 1 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,816 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,816 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,816 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,822 WARN - Trying to connect to 122.224.171.132:11211 for 1 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,822 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,823 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,823 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,846 WARN - Trying to connect to 122.224.171.132:11211 for 1 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,846 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,847 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,847 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,870 WARN - Trying to connect to 122.224.171.132:11211 for 1 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:28,871 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,871 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:28,871 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,811 WARN - Trying to connect to 122.224.171.132:11211 for 2 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,811 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,812 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,811 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,817 WARN - Trying to connect to 122.224.171.132:11211 for 2 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,817 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,817 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,817 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,823 WARN - Trying to connect to 122.224.171.132:11211 for 2 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,823 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,823 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,824 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,848 WARN - Trying to connect to 122.224.171.132:11211 for 2 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,848 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,848 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,848 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,872 WARN - Trying to connect to 122.224.171.132:11211 for 2 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:30,872 ERROR - Exception occured in controller [com.google.code.yanf4j.core.impl.AbstractController]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,873 ERROR - Reactor dispatch events error [remoting]
+java.io.IOException: Connect to 122.224.171.132:11211 fail,No route to host: no further information
+	at net.rubyeye.xmemcached.impl.MemcachedConnector.onConnect(MemcachedConnector.java:402)
+	at com.google.code.yanf4j.nio.impl.Reactor.dispatchEvent(Reactor.java:302)
+	at com.google.code.yanf4j.nio.impl.Reactor.run(Reactor.java:141)
+2014-04-26 08:30:30,872 ERROR - Reconnect to 122.224.171.132:11211 fail [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,821 WARN - Trying to connect to 122.224.171.132:11211 for 3 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,821 WARN - Add a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,821 WARN - Trying to connect to 122.224.171.132:11211 for 3 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,837 WARN - Add a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,837 WARN - Trying to connect to 122.224.171.132:11211 for 3 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,837 WARN - Add a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,869 WARN - Trying to connect to 122.224.171.132:11211 for 3 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,869 WARN - Add a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,885 WARN - Trying to connect to 122.224.171.132:11211 for 3 times [com.google.code.yanf4j.core.impl.AbstractController]
+2014-04-26 08:30:34,885 WARN - Add a session: 122.224.171.132:11211 [com.google.code.yanf4j.core.impl.AbstractController]

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+	
+	<!-- =========================dubbo信息配置======================== -->	
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="hai-srv-shopping" owner="linpn" />
+
+	<!-- 注册中心 -->
+	<dubbo:registry address="${dubbo.registry.address}" file="${user.dir}/logs/dubbo-registry.cache"/>
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" serialization="java" accesslog="true"/>
+	
+	<!-- 服务提供方缺省配置 -->
+	<dubbo:provider timeout="10000" register="${dubbo.provider.register}" />
+	
+	
+	
+	<!-- ===============================消费hai-srv-commons服务============================== -->
+	
+	<!-- 枚举与参数 -->
+	<dubbo:reference id="enumsService" interface="com.haiegoo.commons.service.config.EnumsService" version="1.0" /> <!-- url="dubbo://127.0.0.1:20880" -->
+	
+	
+	<!-- ===================================本系统提供以下服务 ================================= -->
+	
+	<!-- 品牌 -->
+	<dubbo:service interface="com.haiegoo.shopping.service.product.ProductService" ref="productService" version="1.0" />
+	
+	<!-- 品牌 -->
+	<dubbo:service interface="com.haiegoo.shopping.service.product.BrandService" ref="brandService" version="1.0" />
+	
+	<!-- 分类 -->
+	<dubbo:service interface="com.haiegoo.shopping.service.product.CategoryService" ref="categoryService" version="1.0" />
+	
+	<!-- 规格 -->
+	<dubbo:service interface="com.haiegoo.shopping.service.product.SpecificationService" ref="specificationService" version="1.0" />
+	
+	<!-- 属性 -->
+	<dubbo:service interface="com.haiegoo.shopping.service.product.PropertyService" ref="propertyService" version="1.0" />
+	
+		
+</beans>

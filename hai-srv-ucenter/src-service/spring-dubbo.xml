@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+	
+	<!-- =========================dubbo信息配置======================== -->	
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="hai-srv-ucenter" owner="linpn" />
+
+	<!-- 注册中心 -->
+	<dubbo:registry address="${dubbo.registry.address}" file="${user.dir}/logs/dubbo-registry.cache"/>
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" serialization="java" accesslog="true"/>
+	
+	<!-- 服务提供方缺省配置 -->
+	<dubbo:provider timeout="10000" register="${dubbo.provider.register}" />	
+	
+	
+	
+	<!-- ===============================消费hai-srv-commons服务============================== -->
+	
+	<!-- 枚举与参数 -->
+	<dubbo:reference id="enumsService" interface="com.haiegoo.commons.service.config.EnumsService" version="1.0" /> <!-- url="dubbo://127.0.0.1:20880" -->
+	
+	
+	<!-- ===================================本系统提供以下服务 ================================= -->
+	
+	<!-- 后台用户 -->
+	<dubbo:service interface="com.haiegoo.ucenter.service.admin.AdminService" ref="adminService" version="1.0" />
+	
+	<!-- 后台角色 -->
+	<dubbo:service interface="com.haiegoo.ucenter.service.admin.RoleService" ref="roleService" version="1.0" />
+	
+	<!-- 后台模块-->
+	<dubbo:service interface="com.haiegoo.ucenter.service.admin.ModuleService" ref="moduleService" version="1.0" />
+		
+	<!-- 前台用户 -->
+	<dubbo:service interface="com.haiegoo.ucenter.service.user.UserService" ref="userService" version="1.0" />
+		
+	<!-- 前台用户 -->
+	<dubbo:service interface="com.haiegoo.ucenter.service.user.CityService" ref="cityService" version="1.0" />
+	
+		
+</beans>
