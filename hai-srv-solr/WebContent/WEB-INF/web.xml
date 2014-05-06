@@ -13,7 +13,7 @@
   </listener>
   <context-param>
     <param-name>webAppRootKey</param-name>
-    <param-value>hai-srv-solr.root</param-value>
+    <param-value>hai-solr.root</param-value>
   </context-param>
   <context-param>
     <param-name>log4jConfigLocation</param-name>
