@@ -3,7 +3,7 @@
 <ibatorConfiguration>
   <classPathEntry location="D:\Linpn\.m2\repository\mysql\mysql-connector-java\5.1.28\mysql-connector-java-5.1.28.jar" />
   <ibatorContext id="context1">
-    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://122.224.171.132:3306/hai_shopping?useUnicode=true&amp;amp;characterEncoding=utf8&amp;amp;zeroDateTimeBehavior=convertToNull" userId="root" password="mfkjesk" />
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://112.124.35.180:3306/hai_shopping?useUnicode=true&amp;amp;characterEncoding=utf8&amp;amp;zeroDateTimeBehavior=convertToNull" userId="root" password="mfkjesk" />
     <javaModelGenerator targetPackage="ibatis" targetProject="hai-srv-shopping/src-test" />
     <sqlMapGenerator targetPackage="ibatis" targetProject="hai-srv-shopping/src-test" />
     <daoGenerator targetPackage="ibatis" targetProject="hai-srv-shopping/src-test" type="GENERIC-CI" />
