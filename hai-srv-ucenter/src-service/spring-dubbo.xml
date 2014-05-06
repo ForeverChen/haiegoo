@@ -8,7 +8,7 @@
 	<!-- =========================dubbo信息配置======================== -->	
 
 	<!-- 提供方应用信息，用于计算依赖关系 -->
-	<dubbo:application name="hai-srv-ucenter" owner="linpn" />
+	<dubbo:application name="${dubbo.application.name}" owner="linpn" />
 
 	<!-- 注册中心 -->
 	<dubbo:registry address="${dubbo.registry.address}" file="${user.dir}/logs/dubbo-registry.cache"/>

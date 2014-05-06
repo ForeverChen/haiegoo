@@ -3,6 +3,7 @@ cd `dirname $0`
 BIN_DIR=`pwd`
 DEPLOY_DIR=`pwd`
 CONF_DIR=$DEPLOY_DIR/conf
+CLASSES_DIR=$DEPLOY_DIR/classes
 
 SERVER_NAME=`sed '/dubbo.application.name/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
 
@@ -10,7 +11,7 @@ if [ -z "$SERVER_NAME" ]; then
     SERVER_NAME=`hostname`
 fi
 
-PIDS=`ps -ef | grep java | grep "$CONF_DIR" |awk '{print $2}'`
+PIDS=`ps -f | grep java | grep "$CONF_DIR" |awk '{print $2}'`
 if [ -z "$PIDS" ]; then
     echo "ERROR: The $SERVER_NAME does not started!"
     exit 1
