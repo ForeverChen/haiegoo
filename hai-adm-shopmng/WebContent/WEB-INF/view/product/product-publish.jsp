@@ -33,14 +33,19 @@ Ext.onReady(function(){
                 margin: '10 0 10 0'
             },
             items: [{
+			    xtype: 'hiddenfield',
+			    id: 'product.id',
+			    name: 'product.id',
+                value: '${product.id}'
+			},{
                 xtype: 'container',
                 layout: {
                     type: 'hbox'
                 },
                 items: [{
                     xtype:'textfield',
-                    id: 'txtProductName',
-                    name: 'name',
+                    id: 'product.name',
+                    name: 'product.name',
                     fieldLabel: '商品标题',
                     width: 600,
                     allowBlank: false,
@@ -57,8 +62,8 @@ Ext.onReady(function(){
                 },
                 items: [{
                     xtype:'combobox',
-                    id: 'cbbBrandId',
-                    name: 'brandId',
+                    id: 'product.brandId',
+                    name: 'product.brandId',
                     fieldLabel: '品牌',
                     width: 500,
 			        editable: false,
@@ -77,8 +82,8 @@ Ext.onReady(function(){
                 },
                 items: [{
     				xtype: 'treepicker',
-                    id: 'cbbCateId',
-                    name: 'cateId',
+                    id: 'product.cateId',
+                    name: 'product.cateId',
                     fieldLabel: '分类',
                     width: 500,
     			    forceSelection : true,
@@ -113,7 +118,7 @@ Ext.onReady(function(){
                 items: [{
                     xtype:'numberfield',
                     fieldLabel: '重量',
-                    name: 'weight',
+                    name: 'product.weight',
                     minValue: 0,
                     value: '${product.weight}'
                 },{
@@ -129,7 +134,7 @@ Ext.onReady(function(){
                 items: [{
                     xtype:'numberfield',
                     fieldLabel: '数量',
-                    name: 'stockNumber',
+                    name: 'product.stockNumber',
                     minValue: 0,
                     value: '${product.stockNumber}'
                 },{
@@ -145,7 +150,7 @@ Ext.onReady(function(){
                 items: [{
                     xtype:'numberfield',
                     fieldLabel: '价格',
-                    name: 'price',
+                    name: 'product.price',
                     minValue: 0,
                     value: '${product.price}'
                 },{
@@ -231,69 +236,54 @@ Ext.onReady(function(){
             items: [{
                 xtype:'textarea',
                 fieldLabel: '摘要(副标题)',
-                name: 'subName',
+                name: 'product.subName',
                 value: '${product.subName}',
                 height: 50,
                 width: 855
             }, {
                 xtype: 'htmleditor',
                 fieldLabel: '详细描述',
-                name: 'pcDesc',
+                name: 'product.pcDesc',
                 value: '${product.pcDesc}',
                 height: 500,
                 width: 855
     	        },{
     	            xtype:'textarea',
                 fieldLabel: '商家备注（仅商家可见）',
-                name: 'sellerNote',
+                name: 'product.sellerNote',
                 value: '${product.sellerNote}',
                 height: 50,
                 width: 855
             }]
         },{
             xtype: 'container',
-            layout: 'anchor',
-            defaults: {
-                margin: '10 0 10 0'
-            },
-            items: [{
-                xtype: 'radiogroup',
-                fieldLabel: '是否上架销售',
-                items: [
-                    {boxLabel: '是', name: 'saleState', inputValue: 1, checked: '${product.saleState}'=='1'||'${product.saleState}'==''?true:false},
-                    {boxLabel: '否', name: 'saleState', inputValue: 0, checked: '${product.saleState}'=='0'?true:false}
-                ],
-                anchor:'25%'
-            }]
-        },{
-            xtype: 'container',
-            width: 340,
+            width: 430,
             layout:'column',
-            style: 'margin: 30px 300px 30px 300px',
+            style: 'margin: 30px 250px 30px 250px',
             items:[{
 	            xtype: 'button',
 	            width: 250,
 	            margin: '0 5px 0 5px',
 	            scale: 'medium',
 				text: '我已阅读以下规则，现在发布商品',
-				handler: function(){					
+				handler: function(){
 					// 提交表单
-					var _this = this;					
-					_this.disable();
-					Ext.getCmp("frmProduct").submit({
-					    url: Url.saveProduct,
-					    params: {
-					    	id: '${product.id}'
-					    },
-						waitTitle : "提示",
-						waitMsg : "正在保存...",
-					    success: function(form, action) {
-					    	window.location.href = "ProductManage.jspx";
-					    },
-					    failure: function(form, action) {
-					    	Ext.formFailure(form, action);
-					    	_this.enable();
-					    }
+					saveProduct(Ext.getCmp("frmProduct"), {"publish": true}, function(form, action){
+			        	Ext.Msg.alert('提示', "商品保存并发布成功。", function(){
+					    	window.location.href = "product-publish.jspx?action=edit&id="+ action.result.product.id;
+			        	});
+					});
+				}
+			},{
+	            xtype: 'button',
+	            width: 70,
+	            margin: '0 5px 0 5px',
+	            scale: 'medium',
+				text: '保存',
+				handler: function(){
+					// 提交表单
+					saveProduct(Ext.getCmp("frmProduct"), null, function(form, action){
+			        	Ext.Msg.alert('提示', "保存成功。");
 					});
 				}
 			},{
@@ -311,6 +301,26 @@ Ext.onReady(function(){
     });
  	
 });
+
+
+//-------------------------------------以下是相关function-----------------------------------------------//
+
+//添加/编辑
+function saveProduct(frm, params, fn){
+	frm.submit({
+	    url: Url.saveProduct,
+		waitTitle : "提示",
+		waitMsg : "正在保存...",
+	    params: params,
+	    success: function(form, action) {
+	    	if(fn)
+	    		fn(form, action);
+	    },
+	    failure: function(form, action) {
+	    	Ext.formFailure(form, action);
+	    }
+	});
+}
 
 
 // 打开页面框架的tab页

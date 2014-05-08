@@ -1,8 +1,5 @@
 package com.haiegoo.ucenter.utils.controller;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Properties;
@@ -22,14 +19,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.dubbo.rpc.RpcException;
-import com.haiegoo.commons.utils.json.JsonGlobal;
 import com.haiegoo.framework.utils.TreeRecursiveHandle;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.framework.web.controller.BaseController;
 import com.haiegoo.ucenter.model.admin.Admin;
 import com.haiegoo.ucenter.model.admin.Module;
-import com.haiegoo.ucenter.model.admin.Role;
 import com.haiegoo.ucenter.service.admin.AdminService;
 import com.haiegoo.ucenter.service.admin.ModuleService;
 import com.haiegoo.ucenter.service.admin.RoleService;
@@ -179,91 +174,6 @@ public abstract class PageAdmController extends BaseController {
 	
 
 	//------------------------------------- 公共方法 ----------------------------------------------//
-	
-	/**
-	 * 获取当前用户
-	 * @param request request对象
-	 * @param response response对象
-	 * @throws IOException 
-	 */
-	public void getCurrUser(HttpServletExtendRequest request, 
-			HttpServletExtendResponse response) throws IOException {
-		PrintWriter out = response.getWriter();
-		
-		try{
-			Admin admin = (Admin)this.getCurrUser().clone();
-			admin.setPassword("");
-			admin.setRoles(Collections.<Role>emptyList());
-			
-			//输出数据
-			out.println("{success: true, data: '"+ JSONObject.fromObject(admin, JsonGlobal.config) +" '}");
-			
-		}catch(Exception e){
-			out.println("{success: false, msg: '"+ e.getMessage() +"'}");
-			logger.error("获取当前用户出错", e);
-		}finally{		
-			out.close();
-		}
-	}
-	
-	
-	/**
-	 * 保存当前用户
-	 * @param request request对象
-	 * @param response response对象
-	 * @throws IOException 
-	 */
-	public void saveCurrUser(HttpServletExtendRequest request, 
-			HttpServletExtendResponse response) throws IOException {
-		PrintWriter out = response.getWriter();
-		
-		try{						
-			//获取对象
-			Admin user = request.getBindObject(Admin.class, "user");
-			
-			//修改密码
-			boolean checkPassword = request.getBooleanParameter("checkPassword", false, "on");
-			if(checkPassword){
-				String oldPassword = request.getParameter("oldPassword");
-				String password = request.getParameter("password");
-				String rePassword = request.getParameter("rePassword");
-				
-				if(this.getCurrUser().getPassword().equals(md5.encodePassword(oldPassword, user.getUsername()))){
-					if(StringUtils.isNotBlank(password) && password.equals(rePassword)){
-						user.setPassword(md5.encodePassword(password, user.getUsername()));
-					}else{
-						out.println("{success: false, msg: '再次输入的密码不正确'}");
-						return;
-					}
-				}else{
-					out.println("{success: false, msg: '旧密码不正确'}");
-					return;
-				}
-			}
-			
-			//保存到数据库
-			user.setUsername(null);
-			user.setCode(null);
-			adminService.editAdmin(user);
-			
-			//更新当前登录的用户
-			Admin admin = this.getCurrUser();
-			admin.setName(user.getName());
-			admin.setSex(user.getSex());
-			admin.setMobile(user.getMobile());
-			admin.setEmail(user.getEmail());			
-			
-			//输出数据
-			out.println("{success: true}");
-
-		}catch(Exception e){
-			out.println("{success: false, msg: '"+ e.getMessage() +"'}");
-			logger.error("保存当前用户出错", e);
-		}finally{		
-			out.close();
-		}
-	}
-
 	
 	/**
 	 * 

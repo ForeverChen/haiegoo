@@ -1,5 +1,9 @@
 package com.haiegoo.shopmng.web.product;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+
 import javax.annotation.Resource;
 
 import net.sf.json.JSONArray;
@@ -75,78 +79,48 @@ public class ProductPublishController extends PageAdmController {
 	}
 		
 	
-//	/**
-//	 * Ajax请求：保存商品
-//	 * @param request
-//	 * @param response
-//	 * @throws IOException 
-//	 */
-//	public void saveProduct(HttpServletExtendRequest request, 
-//			HttpServletExtendResponse response) throws IOException {
-//		PrintWriter out = response.getWriter();
-//		
-//		try{
-//			//获取参数
-//			String productId = request.getParameter("productId");			//商品ID
-//			String cateId = request.getParameter("cateId");				//商品所属类别
-//			String brandId = request.getParameter("brandId");			//品牌
-//			String typeId = request.getParameter("typeId");				//店铺自定义分类
-//			String productName = request.getParameter("productName");		//商品的名称
-//			String productImage = request.getParameter("productImage");		//商品图片URL
-//			String productNumber = request.getParameter("productNumber");	//商品库存数量
-//			String weight = request.getParameter("weight");				//商品的重量
-//			String marketPrice = request.getParameter("marketPrice");	//市场售价
-//			String shopPrice = request.getParameter("shopPrice");		//本店售价
-//			String productBrief = request.getParameter("productBrief");		//商品的简短描述
-//			String productDesc = request.getParameter("productDesc");		//商品的详细描述
-//			String sellerNote = request.getParameter("sellerNote");		//商家备注
-//			String isReal = request.getParameter("isReal");				//是否是实物
-//			String isOnSale = request.getParameter("isOnSale");			//是否上架销售
-//			String hasInvoice = request.getParameter("hasInvoice");		//是否有发票
-//			String hasWarranty = request.getParameter("hasWarranty");	//是否有保修
-//			
-//			//创建对象
-//			Product product = new Product();
-//			product.setCateId(Integer.valueOf(cateId));
-//			product.setBrandId(Integer.valueOf(brandId));
-//			product.setTypeId(Integer.valueOf(typeId));
-//			product.setProductName(productName);
-//			product.setProductImage(productImage);
-//			product.setProductNumber(Integer.valueOf(productNumber));
-//			product.setWeight(new BigDecimal(weight));
-//			product.setMarketPrice(new BigDecimal(marketPrice));
-//			product.setShopPrice(new BigDecimal(shopPrice));
-//			product.setProductBrief(productBrief);
-//			product.setProductDesc(productDesc);
-//			product.setSellerNote(sellerNote);
-//			product.setIsReal(Byte.valueOf(isReal));
-//			product.setIsOnSale(Byte.valueOf(isOnSale));
-//			product.setHasInvoice(Byte.valueOf(hasInvoice));
-//			product.setHasWarranty(Byte.valueOf(hasWarranty));
-//			product.setPublishTime(product.getIsOnSale().byteValue()==1?new Date():null);
-//			
-//			if(productId==null || productId.equals("")){
-//				//添加对象
-//				product.setProductSn(UUID.randomUUID().toString().toUpperCase());
-//				product.setCreateTime(new Date());
-//				productService.addProduct(product);
-//			}else{
-//				//编辑对象
-//				product.setProductId(Long.valueOf(productId));
-//				product.setUpdateTime(new Date());
-//				productService.editProduct(product);
-//			}
-//			
-//			//输出数据
-//			out.println("{success: true}");
-//
-//		}catch(Exception e){
-//			out.println("{success: false, msg: '"+ e.getMessage() +"'}");
-//			logger.error(e.getMessage(), e);
-//		}
-//		
-//		out.close();
-//	}
+	/**
+	 * Ajax请求：保存商品
+	 * @param request
+	 * @param response
+	 * @throws IOException 
+	 */
+	public void saveProduct(HttpServletExtendRequest request, 
+			HttpServletExtendResponse response) throws IOException {
+		PrintWriter out = response.getWriter();
+		
+		try{
+			//获取参数
+			Product product = request.getBindObject(Product.class, "product");
+			boolean publish = request.getBooleanParameter("publish", false);
+			
+			if(product.getId()==null){
+				//添加对象
+				product.setCreateTime(new Date());
+				long id = productService.addProduct(product, false, false, false);
+				product.setId(id);
+			}else{
+				//编辑对象
+				product.setUpdateTime(new Date());
+				long id = productService.editProduct(product, false, false, false);
+				product.setId(id);
+			}
+			
+			//设置上架
+			if(publish){
+				productService.upShelfProduct(new Long[]{product.getId()});
+			}
+			
+			//输出数据
+            out.println("{success: true, product:{id:"+ product.getId() +"}}");
+
+		}catch(Exception e){
+			out.println("{success: false, msg: '"+ e.getMessage() +"'}");
+			logger.error(e.getMessage(), e);
+		}
+		
+		out.close();
+	}
 //	
 //	
 //	/**

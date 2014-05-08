@@ -13,8 +13,10 @@ import org.springframework.orm.ibatis.SqlMapClientCallback;
 import org.springframework.orm.ibatis.SqlMapClientTemplate;
 
 import com.alibaba.dubbo.rpc.RpcException;
+import com.haiegoo.commons.enums.State;
 import com.haiegoo.commons.service.BaseService;
 import com.haiegoo.framework.utils.DateUtils;
+import com.haiegoo.shopping.enums.SaleState;
 import com.haiegoo.shopping.model.product.Product;
 import com.haiegoo.shopping.service.product.ProductService;
 import com.ibatis.sqlmap.client.SqlMapExecutor;
@@ -283,19 +285,22 @@ public class ProductServiceImpl extends BaseService implements ProductService {
 
 					for(long id : ids){
 						// 验证是否可以上架操
+						Product product = getProduct(id);
 						
 						// 设置参数
-						Product product = getProduct(id);
-						product.setSaleState((byte)1);		// 设置上架
-						product.setUpShelfTime(new Date());
-						
-						//判断是不是首次发布
-						if(product.getSaleState()==0 || DateUtils.format(product.getPublishTime()).equals("1000-01-01 00:00:00")){
-							product.setPublishTime(new Date());
+						if(product.getSaleState()!=SaleState.SELLING.getCode()){
+							// 设置上架
+							product.setSaleState(SaleState.SELLING.getCode());
+							product.setUpShelfTime(new Date());
+							
+							//判断是不是首次发布
+							if(product.getSaleState()==0 || DateUtils.format(product.getPublishTime()).equals("1000-01-01 00:00:00")){
+								product.setPublishTime(new Date());
+							}
+							
+							// 执行SQL
+							sqlMapClientShopping.update("product.editProduct", product);
 						}
-						
-						// 执行SQL
-						sqlMapClientShopping.update("product.editProduct", product);
 						result.add(id);
 					}
 					
@@ -324,15 +329,17 @@ public class ProductServiceImpl extends BaseService implements ProductService {
 
 					for(long id : ids){
 						// 验证是否可以下架
+						Product product = getProduct(id);
 						
 						// 设置参数
-						Product product = new Product();
-						product.setId(id);
-						product.setSaleState((byte)3);		// 设置手动下架
-						product.setOffShelfTime(new Date());
-						
-						// 执行SQL
-						sqlMapClientShopping.update("product.editProduct", product);
+						if(product.getSaleState()!=SaleState.HAND_OFF_SHELF.getCode()){
+							// 设置手动下架
+							product.setSaleState(SaleState.HAND_OFF_SHELF.getCode());
+							product.setOffShelfTime(new Date());
+							
+							// 执行SQL
+							sqlMapClientShopping.update("product.editProduct", product);
+						}
 						result.add(id);
 					}
 					
@@ -361,15 +368,17 @@ public class ProductServiceImpl extends BaseService implements ProductService {
 
 					for(long id : ids){
 						// 验证是否可以删除
+						Product product = getProduct(id);
 						
 						// 设置参数
-						Product product = new Product();
-						product.setId(id);
-						product.setState((byte)3); 			// 设置删除
-						product.setDeleteTime(new Date());	
-						
-						// 执行SQL
-						sqlMapClientShopping.update("product.editProduct", product);
+						if(product.getState()!=State.DELETED.getCode()){
+							// 设置删除
+							product.setState(State.DELETED.getCode());
+							product.setDeleteTime(new Date());	
+							
+							// 执行SQL
+							sqlMapClientShopping.update("product.editProduct", product);
+						}
 						result.add(id);
 					}
 					
@@ -397,14 +406,18 @@ public class ProductServiceImpl extends BaseService implements ProductService {
 					executor.startBatch();
 
 					for(long id : ids){
-						// 设置参数
-						Product product = new Product();
-						product.setId(id);
-						product.setState((byte)1); 			// 设置恢复
-						product.setDeleteTime(DateUtils.parse("1000-01-01 00:00:00"));
+						// 验证是否可以恢复
+						Product product = getProduct(id);
 						
-						// 执行SQL
-						sqlMapClientShopping.update("product.editProduct", product);
+						// 设置参数
+						if(product.getState()!=State.ENABLE.getCode()){
+							// 设置恢复
+							product.setState(State.ENABLE.getCode());
+							product.setDeleteTime(DateUtils.parse("1000-01-01 00:00:00"));
+							
+							// 执行SQL
+							sqlMapClientShopping.update("product.editProduct", product);
+						}
 						result.add(id);
 					}
 					
