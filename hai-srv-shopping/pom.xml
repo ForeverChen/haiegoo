@@ -252,6 +252,11 @@
 			<artifactId>hai-srv-commons</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
+        <dependency>
+            <groupId>com.haiegoo</groupId>
+            <artifactId>hai-srv-ucenter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
