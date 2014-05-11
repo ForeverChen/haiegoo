@@ -16,7 +16,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 
 /**
- * Zookeeper Session 装饰类
+ * Redis Session 装饰类
  * @author Linpn
  */
 @SuppressWarnings("deprecation")
