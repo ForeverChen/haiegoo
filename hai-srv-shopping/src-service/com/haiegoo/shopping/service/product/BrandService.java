@@ -36,13 +36,13 @@ public interface BrandService extends Serializable {
 	
 	/**
 	 * 添加品牌信息
-	 * @param Brand 品牌信息
+	 * @param brand 品牌信息
 	 */
-	Brand addBrand(Brand brands);	
+	Brand addBrand(Brand brand);
 	
 	/**
 	 * 修改品牌信息
-	 * @param Brand 品牌信息
+	 * @param brand 品牌信息
 	 */
-	Brand editBrand(Brand Brands);
+	Brand editBrand(Brand brand);
 }
