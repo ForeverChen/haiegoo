@@ -641,7 +641,7 @@
   </component>
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/huodong" libraries="{huodong node_modules}" />
-    <file url="PROJECT" libraries="{ExtJS 4.2}" />
+    <file url="PROJECT" libraries="{ExtJS 4.2, jQuery}" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -810,11 +810,11 @@
       <properties>
         <option name="frameworkName" value="ExtJS 4.2" />
         <sourceFilesUrls>
-          <item url="file://$PROJECT_DIR$/hai-adm-ass/WebContent/WEB-RES/js/extjs4.2" />
+          <item url="file://$PROJECT_DIR$/hai-adm-ass/WebContent/WEB-RES/js/extjs4.2/ext-all-dev.js" />
         </sourceFilesUrls>
       </properties>
       <CLASSES>
-        <root url="file://$PROJECT_DIR$/hai-adm-ass/WebContent/WEB-RES/js/extjs4.2" />
+        <root url="file://$PROJECT_DIR$/hai-adm-ass/WebContent/WEB-RES/js/extjs4.2/ext-all-dev.js" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -828,6 +828,19 @@
       </properties>
       <CLASSES>
         <root url="file://$PROJECT_DIR$/huodong/node_modules" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="jQuery" type="javaScript">
+      <properties>
+        <option name="frameworkName" value="jQuery" />
+        <sourceFilesUrls>
+          <item url="file://$PROJECT_DIR$/haiegoo/WebContent/WEB-RES/js/jquery1.x/jquery-1.10.2.js" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/haiegoo/WebContent/WEB-RES/js/jquery1.x/jquery-1.10.2.js" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
