@@ -1,24 +1,20 @@
 package com.haiegoo.shopmng.web.product;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Date;
-
-import javax.annotation.Resource;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
-import org.springframework.web.servlet.ModelAndView;
-
 import com.haiegoo.commons.enums.State;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.shopping.model.product.Product;
-import com.haiegoo.shopping.service.product.BrandService;
 import com.haiegoo.shopping.service.product.CategoryService;
 import com.haiegoo.shopping.service.product.ProductService;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
 
 /**
  * 我要卖、编辑商品 页面
@@ -28,13 +24,6 @@ public class ProductPublishController extends PageAdmController {
 
 	@Resource
 	private ProductService productService;
-	@Resource
-	private BrandService brandService;
-	@Resource
-	protected CategoryService categoryService;
-//	@Resource
-//	private PropertyService propertiesService;
-	
 	
 	@Override
 	public void execute(HttpServletExtendRequest request,

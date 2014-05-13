@@ -1,18 +1,5 @@
 package com.haiegoo.shopmng.web.product;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
-import org.springframework.web.servlet.ModelAndView;
-
 import com.haiegoo.commons.utils.json.JsonGlobal;
 import com.haiegoo.framework.utils.ConvertUtils;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
@@ -20,6 +7,16 @@ import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.shopping.model.product.Product;
 import com.haiegoo.shopping.service.product.ProductService;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 出售中的商品页面

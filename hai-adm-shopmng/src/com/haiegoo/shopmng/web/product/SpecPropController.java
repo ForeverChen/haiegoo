@@ -1,17 +1,5 @@
 package com.haiegoo.shopmng.web.product;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONException;
-import net.sf.json.JSONObject;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.haiegoo.framework.utils.TreeRecursiveHandle;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
@@ -22,6 +10,16 @@ import com.haiegoo.shopping.service.product.CategoryService;
 import com.haiegoo.shopping.service.product.PropertyService;
 import com.haiegoo.shopping.service.product.SpecificationService;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONException;
+import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 public class SpecPropController extends PageAdmController {
 
