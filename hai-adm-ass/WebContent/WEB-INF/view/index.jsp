@@ -8,8 +8,8 @@
 <meta name="fragment" content="!">
 <script type="text/javascript">if(window.parent && window.parent!=window)window.parent.location.href=window.location.href;</script>
 <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-<link rel="stylesheet" href="WEB-RES/js/extjs4.2/app/resources/css/app.css" type="text/css" />
-<script type="text/javascript" src="WEB-RES/js/extjs4.2/app/ext-all.js"></script>
+<link rel="stylesheet" type="text/css" href="WEB-RES/js/extjs4.2/app/resources/css/app.css" />
+<script type="text/javascript" src="WEB-RES/js/extjs4.2/ext-all.js"></script>
 <script type="text/javascript" src="WEB-RES/js/extjs4.2/app/data.js"></script>
 <script type="text/javascript">
 Docs.data.casass = Ext.decode('${casass}');
