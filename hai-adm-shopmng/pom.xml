@@ -41,7 +41,7 @@
 	<build>
 		<finalName>shopmng</finalName>
 		<sourceDirectory>src</sourceDirectory>
-		<outputDirectory>WebContent/WEB-INF/classes</outputDirectory>
+		<outputDirectory>webapp/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -92,7 +92,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
-					<warSourceDirectory>WebContent</warSourceDirectory>
+					<warSourceDirectory>webapp</warSourceDirectory>
 				</configuration>
 			</plugin>
 		</plugins>

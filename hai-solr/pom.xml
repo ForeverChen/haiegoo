@@ -8,7 +8,7 @@
 	<build>
 		<finalName>solr</finalName>
 		<sourceDirectory>src</sourceDirectory>
-		<outputDirectory>WebContent/WEB-INF/classes</outputDirectory>
+		<outputDirectory>webapp/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -59,7 +59,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
-					<warSourceDirectory>WebContent</warSourceDirectory>
+					<warSourceDirectory>webapp</warSourceDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -220,21 +220,21 @@
 			<artifactId>apache-solr-dataimportscheduler</artifactId>
 			<version>1.0.0</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/WebContent/WEB-INF/lib/apache-solr-dataimportscheduler-1.0.jar</systemPath>
+			<systemPath>${basedir}/webapp/WEB-INF/lib/apache-solr-dataimportscheduler-1.0.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>net.paoding.analysis</groupId>
 			<artifactId>paoding-analysis</artifactId>
 			<version>2.0.4</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/WebContent/WEB-INF/lib/paoding-analysis-2.0.4.jar</systemPath>
+			<systemPath>${basedir}/webapp/WEB-INF/lib/paoding-analysis-2.0.4.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>net.sourceforge.pinyin4j</groupId>
 			<artifactId>pinyin4j</artifactId>
 			<version>2.5.0</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/WebContent/WEB-INF/lib/pinyin4j-2.5.0.jar</systemPath>
+			<systemPath>${basedir}/webapp/WEB-INF/lib/pinyin4j-2.5.0.jar</systemPath>
 		</dependency>
 	</dependencies>
 </project>

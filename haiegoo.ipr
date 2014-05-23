@@ -814,7 +814,7 @@
         </sourceFilesUrls>
       </properties>
       <CLASSES>
-        <root url="file://$PROJECT_DIR$/hai-adm-ass/WebContent/WEB-RES/js/extjs4.2/ext-all-dev.js" />
+        <root url="file://$PROJECT_DIR$/hai-adm-ass/webapp/WEB-RES/js/extjs4.2/ext-all-dev.js" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -840,7 +840,7 @@
         </sourceFilesUrls>
       </properties>
       <CLASSES>
-        <root url="file://$PROJECT_DIR$/haiegoo/WebContent/WEB-RES/js/jquery1.x/jquery-1.10.2.js" />
+        <root url="file://$PROJECT_DIR$/haiegoo/webapp/WEB-RES/js/jquery1.x/jquery-1.10.2.js" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
