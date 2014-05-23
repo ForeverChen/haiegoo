@@ -1,6 +1,5 @@
 <settings xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0  
-                               http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 	<localRepository />
 	<interactiveMode />
 	<usePluginRegistry />
@@ -37,32 +36,28 @@
 				<!-- </snapshots> -->
 				<!-- </repository> -->
 				<repository>
-					<id>alibaba</id>
-					<name>alibaba repository</name>
-					<url>http://code.alibabatech.com/mvn/releases</url>
+					<id>oschina-repository</id>
+					<url>http://maven.oschina.net/content/groups/public</url>
 				</repository>
 				<repository>
-					<id>jasig</id>
-					<name>jasig maven2 repository</name>
-					<url>http://developer.ja-sig.org/maven2</url>
+					<id>apache-repository</id>
+					<url>http://repo.maven.apache.org/maven2</url>
 				</repository>
 				<repository>
-					<id>google</id>
-					<name>google maven repository</name>
-					<url>https://m2repos.googlecode.com/svn/nexus/</url>
-				</repository>
-				<repository>
-					<id>jboss</id>
-					<name>jboss maven repository</name>
+					<id>jboss-repository</id>
 					<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
 				</repository>
 				<repository>
-					<id>apache</id>
-					<name>apache maven repository</name>
-					<url>http://repo.maven.apache.org/maven2</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
+					<id>google-repository</id>
+					<url>https://m2repos.googlecode.com/svn/nexus/</url>
+				</repository>
+				<repository>
+					<id>jasig-repository</id>
+					<url>http://developer.ja-sig.org/maven2</url>
+				</repository>
+				<repository>
+					<id>alibaba-repository</id>
+					<url>http://code.alibabatech.com/mvn/releases</url>
 				</repository>
 			</repositories>
 			<pluginRepositories>
