@@ -1,7 +1,7 @@
 package com.haiegoo.shopmng.web.product;
 
 import com.haiegoo.commons.utils.json.JsonGlobal;
-import com.haiegoo.framework.utils.ConvertUtils;
+import com.haiegoo.commons.utils.ConvertUtils;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.shopping.model.product.Product;

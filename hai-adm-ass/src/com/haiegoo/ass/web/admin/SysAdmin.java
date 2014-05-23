@@ -14,7 +14,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.haiegoo.commons.utils.json.JsonGlobal;
-import com.haiegoo.framework.utils.ConvertUtils;
+import com.haiegoo.commons.utils.ConvertUtils;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.ucenter.model.admin.Admin;

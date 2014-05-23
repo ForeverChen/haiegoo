@@ -15,7 +15,7 @@ import org.springframework.orm.ibatis.SqlMapClientTemplate;
 import com.alibaba.dubbo.rpc.RpcException;
 import com.haiegoo.commons.enums.State;
 import com.haiegoo.commons.service.BaseService;
-import com.haiegoo.framework.utils.DateUtils;
+import com.haiegoo.commons.utils.DateUtils;
 import com.haiegoo.shopping.enums.SaleState;
 import com.haiegoo.shopping.model.product.Product;
 import com.haiegoo.shopping.service.product.ProductService;

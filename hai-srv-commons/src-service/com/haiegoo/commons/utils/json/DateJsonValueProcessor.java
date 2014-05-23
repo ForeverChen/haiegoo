@@ -6,7 +6,7 @@ import java.util.Date;
 import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsonValueProcessor;
 
-import com.haiegoo.framework.utils.DateUtils;
+import com.haiegoo.commons.utils.DateUtils;
 
 /**
  * 
