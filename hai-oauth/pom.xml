@@ -65,11 +65,17 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<dependency>
-			<groupId>com.haiegoo</groupId>
-			<artifactId>hai-framework</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
+        <dependency>
+            <groupId>com.haiegoo</groupId>
+            <artifactId>hai-srv-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
