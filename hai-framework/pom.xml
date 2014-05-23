@@ -38,7 +38,7 @@
 	
 	<!-- 构建 -->
 	<build>
-		<sourceDirectory>src-framework</sourceDirectory>
+		<sourceDirectory>src</sourceDirectory>
 		<testSourceDirectory>src-test</testSourceDirectory>
 		<outputDirectory>target/classes</outputDirectory>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
@@ -56,7 +56,7 @@
 						</goals>
 						<configuration>
 							<sources>
-								<source>${basedir}/src-framework</source>
+								<source>${basedir}/src</source>
 							</sources>
 						</configuration>
 					</execution>
@@ -69,7 +69,7 @@
 						<configuration>
 							<resources>
 								<resource>
-									<directory>${basedir}/src-framework</directory>
+									<directory>${basedir}/src</directory>
 									<excludes>
 										<exclude>**/*.java</exclude>
 									</excludes>
