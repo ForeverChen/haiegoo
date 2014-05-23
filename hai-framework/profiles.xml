@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profilesXml xmlns="http://maven.apache.org/PROFILES/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://maven.apache.org/PROFILES/1.0.0 http://maven.apache.org/xsd/profiles-1.0.0.xsd">
+    <profiles>
+        <profile>
+            <id>haiegoo</id>
+            <repositories>
+                <!-- <repository> -->
+                <!-- <id>nexus</id> -->
+                <!-- <name>Repository for Local Nexus Server</name> -->
+                <!-- <url>http://192.168.11.225:8081/nexus/content/groups/public/</url> -->
+                <!-- <layout>default</layout> -->
+                <!-- <releases> -->
+                <!-- <enabled>true</enabled> -->
+                <!-- </releases> -->
+                <!-- <snapshots> -->
+                <!-- <enabled>true</enabled> -->
+                <!-- <updatePolicy>always</updatePolicy> -->
+                <!-- </snapshots> -->
+                <!-- </repository> -->
+                <repository>
+                    <id>oschina-repository</id>
+                    <url>http://maven.oschina.net/content/groups/public</url>
+                </repository>
+                <repository>
+                    <id>apache-repository</id>
+                    <url>http://repo.maven.apache.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>jboss-repository</id>
+                    <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+                </repository>
+                <repository>
+                    <id>google-repository</id>
+                    <url>https://m2repos.googlecode.com/svn/nexus/</url>
+                </repository>
+                <repository>
+                    <id>jasig-repository</id>
+                    <url>http://developer.ja-sig.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>alibaba-repository</id>
+                    <url>http://code.alibabatech.com/mvn/releases</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <!-- <pluginRepository> -->
+                <!-- <id>nexus</id> -->
+                <!-- <name>Repository for Local Nexus Server</name> -->
+                <!-- <url> -->
+                <!-- http://192.168.11.225:8081/nexus/content/groups/public/ -->
+                <!-- </url> -->
+                <!-- <layout>default</layout> -->
+                <!-- </pluginRepository> -->
+                <pluginRepository>
+                    <id>apache</id>
+                    <name>apache maven repository</name>
+                    <url>http://repo.maven.apache.org/maven2</url>
+                    <releases>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</profilesXml>
