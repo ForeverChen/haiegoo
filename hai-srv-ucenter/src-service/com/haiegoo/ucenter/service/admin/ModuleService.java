@@ -1,11 +1,11 @@
 package com.haiegoo.ucenter.service.admin;
 
+import com.haiegoo.ucenter.model.admin.Admin;
+import com.haiegoo.ucenter.model.admin.Module;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import com.haiegoo.ucenter.model.admin.Admin;
-import com.haiegoo.ucenter.model.admin.Module;
 
 /**
  * 功能模块服务类

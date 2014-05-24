@@ -1,11 +1,9 @@
 package com.haiegoo.ucenter.service.user.impl;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
+import com.alibaba.dubbo.rpc.RpcException;
+import com.haiegoo.commons.service.BaseService;
+import com.haiegoo.ucenter.model.user.User;
+import com.haiegoo.ucenter.service.user.UserService;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.orm.ibatis.SqlMapClientTemplate;
@@ -15,10 +13,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.alibaba.dubbo.rpc.RpcException;
-import com.haiegoo.commons.service.BaseService;
-import com.haiegoo.ucenter.model.user.User;
-import com.haiegoo.ucenter.service.user.UserService;
+import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**

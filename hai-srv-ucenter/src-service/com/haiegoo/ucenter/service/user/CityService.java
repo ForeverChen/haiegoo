@@ -1,10 +1,10 @@
 package com.haiegoo.ucenter.service.user;
 
+import com.haiegoo.ucenter.model.user.City;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import com.haiegoo.ucenter.model.user.City;
 
 /**
  * 区域管理服务接口

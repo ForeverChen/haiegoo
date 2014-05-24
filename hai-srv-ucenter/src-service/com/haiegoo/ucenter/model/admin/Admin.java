@@ -1,16 +1,15 @@
 package com.haiegoo.ucenter.model.admin;
 
+import com.haiegoo.commons.enums.State;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
-import com.haiegoo.commons.enums.State;
 
 public class Admin implements UserDetails, Serializable, Cloneable {
 	

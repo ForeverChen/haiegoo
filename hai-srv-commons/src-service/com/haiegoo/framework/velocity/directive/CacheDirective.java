@@ -1,11 +1,6 @@
 package com.haiegoo.framework.velocity.directive;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.io.Writer;
-
 import net.rubyeye.xmemcached.MemcachedClient;
-
 import org.apache.oro.util.Cache;
 import org.apache.velocity.context.InternalContextAdapter;
 import org.apache.velocity.exception.MethodInvocationException;
@@ -15,6 +10,10 @@ import org.apache.velocity.exception.TemplateInitException;
 import org.apache.velocity.runtime.RuntimeServices;
 import org.apache.velocity.runtime.directive.Directive;
 import org.apache.velocity.runtime.parser.node.Node;
+
+import java.io.IOException;
+import java.io.StringWriter;
+import java.io.Writer;
 
 
 /**

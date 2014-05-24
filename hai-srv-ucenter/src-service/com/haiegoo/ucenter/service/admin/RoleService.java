@@ -1,10 +1,10 @@
 package com.haiegoo.ucenter.service.admin;
 
+import com.haiegoo.ucenter.model.admin.Role;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import com.haiegoo.ucenter.model.admin.Role;
 
 /**
  * 后台角色服务类

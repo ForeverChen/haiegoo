@@ -1,11 +1,10 @@
 package com.haiegoo.framework.web;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import org.springframework.web.multipart.MultipartRequest;
 
 import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.web.multipart.MultipartRequest;
+import java.math.BigDecimal;
+import java.util.Date;
 
 
 public interface HttpServletExtendRequest extends HttpServletRequest,

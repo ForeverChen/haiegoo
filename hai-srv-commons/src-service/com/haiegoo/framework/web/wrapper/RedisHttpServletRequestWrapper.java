@@ -1,11 +1,11 @@
 package com.haiegoo.framework.web.wrapper;
 
+import org.springframework.data.redis.core.RedisTemplate;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpSession;
-
-import org.springframework.data.redis.core.RedisTemplate;
 
 
 /**

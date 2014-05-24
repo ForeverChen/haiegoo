@@ -4,7 +4,6 @@ import com.haiegoo.commons.enums.State;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.shopping.model.product.Product;
-import com.haiegoo.shopping.service.product.CategoryService;
 import com.haiegoo.shopping.service.product.ProductService;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
 import net.sf.json.JSONArray;

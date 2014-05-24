@@ -3,11 +3,11 @@
  */
 package com.haiegoo.ucenter.utils.security;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.lang.StringUtils;
 import org.jasig.cas.client.util.CommonUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 继承CasAuthenticationEntryPoint，重写createServiceUrl方法，实现登录后的跳转问题

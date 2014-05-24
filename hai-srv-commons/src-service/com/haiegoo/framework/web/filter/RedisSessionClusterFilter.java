@@ -1,19 +1,17 @@
 package com.haiegoo.framework.web.filter;
 
-import java.io.IOException;
+import com.haiegoo.framework.web.wrapper.RedisHttpServletRequestWrapper;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.context.ContextLoader;
+import org.springframework.web.filter.GenericFilterBean;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.context.ContextLoader;
-import org.springframework.web.filter.GenericFilterBean;
-
-import com.haiegoo.framework.web.wrapper.RedisHttpServletRequestWrapper;
+import java.io.IOException;
 
 /**
  * Redis集群拦截器

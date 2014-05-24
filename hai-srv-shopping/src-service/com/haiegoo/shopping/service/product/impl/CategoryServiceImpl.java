@@ -1,19 +1,17 @@
 package com.haiegoo.shopping.service.product.impl;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.dao.DuplicateKeyException;
-import org.springframework.orm.ibatis.SqlMapClientTemplate;
-
 import com.alibaba.dubbo.rpc.RpcException;
 import com.haiegoo.commons.service.BaseService;
 import com.haiegoo.shopping.model.product.Category;
 import com.haiegoo.shopping.service.product.CategoryService;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+
+import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class CategoryServiceImpl extends BaseService implements CategoryService {
 

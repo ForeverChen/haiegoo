@@ -1,10 +1,10 @@
 package com.haiegoo.commons.service.config;
 
+import com.haiegoo.commons.model.config.Enums;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import com.haiegoo.commons.model.config.Enums;
 
 /**
  * 枚举服务接口

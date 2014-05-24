@@ -16,14 +16,10 @@
 
 package com.haiegoo.framework.ibatis;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
-import javax.sql.DataSource;
-
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.ibatis.sqlmap.client.SqlMapExecutor;
+import com.ibatis.sqlmap.client.SqlMapSession;
+import com.ibatis.sqlmap.client.event.RowHandler;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.io.Resource;
 import org.springframework.dao.DataAccessException;
@@ -37,10 +33,12 @@ import org.springframework.orm.ibatis.SqlMapClientFactoryBean;
 import org.springframework.orm.ibatis.SqlMapClientOperations;
 import org.springframework.util.Assert;
 
-import com.ibatis.sqlmap.client.SqlMapClient;
-import com.ibatis.sqlmap.client.SqlMapExecutor;
-import com.ibatis.sqlmap.client.SqlMapSession;
-import com.ibatis.sqlmap.client.event.RowHandler;
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 /**
  * Helper class that simplifies data access via the iBATIS

@@ -1,26 +1,24 @@
 package com.haiegoo.ass.web.admin;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.haiegoo.commons.utils.json.JsonGlobal;
 import com.haiegoo.commons.utils.ConvertUtils;
+import com.haiegoo.commons.utils.json.JsonGlobal;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.ucenter.model.admin.Admin;
 import com.haiegoo.ucenter.model.admin.Module;
 import com.haiegoo.ucenter.model.admin.Role;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SysAdmin extends PageAdmController {
 	

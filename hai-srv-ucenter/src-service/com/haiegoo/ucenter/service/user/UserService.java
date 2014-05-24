@@ -1,12 +1,11 @@
 package com.haiegoo.ucenter.service.user;
 
+import com.haiegoo.ucenter.model.user.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import org.springframework.security.core.userdetails.UserDetailsService;
-
-import com.haiegoo.ucenter.model.user.User;
 
 
 /**

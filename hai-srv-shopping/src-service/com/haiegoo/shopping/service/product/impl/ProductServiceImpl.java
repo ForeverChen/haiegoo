@@ -1,17 +1,5 @@
 package com.haiegoo.shopping.service.product.impl;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
-import org.springframework.orm.ibatis.SqlMapClientCallback;
-import org.springframework.orm.ibatis.SqlMapClientTemplate;
-
 import com.alibaba.dubbo.rpc.RpcException;
 import com.haiegoo.commons.enums.State;
 import com.haiegoo.commons.service.BaseService;
@@ -20,6 +8,12 @@ import com.haiegoo.shopping.enums.SaleState;
 import com.haiegoo.shopping.model.product.Product;
 import com.haiegoo.shopping.service.product.ProductService;
 import com.ibatis.sqlmap.client.SqlMapExecutor;
+import org.springframework.orm.ibatis.SqlMapClientCallback;
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+
+import javax.annotation.Resource;
+import java.sql.SQLException;
+import java.util.*;
 
 public class ProductServiceImpl extends BaseService implements ProductService {
 

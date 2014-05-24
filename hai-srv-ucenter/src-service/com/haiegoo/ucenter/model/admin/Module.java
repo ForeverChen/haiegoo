@@ -1,8 +1,8 @@
 package com.haiegoo.ucenter.model.admin;
 
-import java.io.Serializable;
-
 import com.haiegoo.ucenter.service.admin.ModuleService;
+
+import java.io.Serializable;
 
 public class Module implements Serializable {
 	

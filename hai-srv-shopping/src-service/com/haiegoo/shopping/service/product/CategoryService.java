@@ -1,10 +1,10 @@
 package com.haiegoo.shopping.service.product;
 
+import com.haiegoo.shopping.model.product.Category;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-
-import com.haiegoo.shopping.model.product.Category;
 
 public interface CategoryService extends Serializable {
 	

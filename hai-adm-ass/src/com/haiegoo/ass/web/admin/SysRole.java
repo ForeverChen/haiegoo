@@ -1,18 +1,5 @@
 package com.haiegoo.ass.web.admin;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONException;
-import net.sf.json.JSONObject;
-
-import org.springframework.web.servlet.ModelAndView;
-
 import com.alibaba.dubbo.rpc.RpcException;
 import com.haiegoo.commons.utils.ConvertUtils;
 import com.haiegoo.framework.utils.TreeRecursiveHandle;
@@ -22,6 +9,17 @@ import com.haiegoo.ucenter.model.admin.Admin;
 import com.haiegoo.ucenter.model.admin.Module;
 import com.haiegoo.ucenter.model.admin.Role;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONException;
+import net.sf.json.JSONObject;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SysRole extends PageAdmController {
 	

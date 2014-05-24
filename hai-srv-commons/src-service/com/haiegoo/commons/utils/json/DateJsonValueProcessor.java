@@ -1,12 +1,11 @@
 package com.haiegoo.commons.utils.json;
 
-import java.sql.Timestamp;
-import java.util.Date;
-
+import com.haiegoo.commons.utils.DateUtils;
 import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsonValueProcessor;
 
-import com.haiegoo.commons.utils.DateUtils;
+import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * 

@@ -1,18 +1,16 @@
 package com.haiegoo.shopping.service.product.impl;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
-import org.springframework.dao.DuplicateKeyException;
-import org.springframework.orm.ibatis.SqlMapClientTemplate;
-
 import com.alibaba.dubbo.rpc.RpcException;
 import com.haiegoo.commons.service.BaseService;
 import com.haiegoo.shopping.model.product.Property;
 import com.haiegoo.shopping.service.product.PropertyService;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+
+import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class PropertyServiceImpl extends BaseService implements PropertyService {
 

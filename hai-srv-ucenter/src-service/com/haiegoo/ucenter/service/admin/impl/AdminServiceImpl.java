@@ -1,17 +1,16 @@
 package com.haiegoo.ucenter.service.admin.impl;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.TimeoutException;
-
-import javax.annotation.Resource;
-
+import com.alibaba.dubbo.rpc.RpcException;
+import com.haiegoo.commons.service.BaseService;
+import com.haiegoo.ucenter.model.admin.Admin;
+import com.haiegoo.ucenter.model.admin.AdminRole;
+import com.haiegoo.ucenter.model.admin.Module;
+import com.haiegoo.ucenter.model.admin.Role;
+import com.haiegoo.ucenter.service.admin.AdminService;
+import com.haiegoo.ucenter.service.admin.ModuleService;
+import com.haiegoo.ucenter.service.admin.RoleService;
+import com.ibatis.sqlmap.client.SqlMapExecutor;
 import net.rubyeye.xmemcached.exception.MemcachedException;
-
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.orm.ibatis.SqlMapClientCallback;
@@ -24,16 +23,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.alibaba.dubbo.rpc.RpcException;
-import com.haiegoo.commons.service.BaseService;
-import com.haiegoo.ucenter.model.admin.Admin;
-import com.haiegoo.ucenter.model.admin.AdminRole;
-import com.haiegoo.ucenter.model.admin.Module;
-import com.haiegoo.ucenter.model.admin.Role;
-import com.haiegoo.ucenter.service.admin.AdminService;
-import com.haiegoo.ucenter.service.admin.ModuleService;
-import com.haiegoo.ucenter.service.admin.RoleService;
-import com.ibatis.sqlmap.client.SqlMapExecutor;
+import javax.annotation.Resource;
+import java.sql.SQLException;
+import java.util.*;
+import java.util.concurrent.TimeoutException;
 
 
 /**

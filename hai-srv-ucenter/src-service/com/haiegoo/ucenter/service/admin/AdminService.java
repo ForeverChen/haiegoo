@@ -1,14 +1,13 @@
 package com.haiegoo.ucenter.service.admin;
 
+import com.haiegoo.ucenter.model.admin.Admin;
+import org.springframework.security.access.ConfigAttribute;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-
-import org.springframework.security.access.ConfigAttribute;
-import org.springframework.security.core.userdetails.UserDetailsService;
-
-import com.haiegoo.ucenter.model.admin.Admin;
 
 
 /**

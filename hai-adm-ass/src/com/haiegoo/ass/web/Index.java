@@ -1,14 +1,12 @@
 package com.haiegoo.ass.web;
 
-import net.sf.json.JSONObject;
-
-import org.springframework.web.servlet.ModelAndView;
-
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.ucenter.model.admin.Admin;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
 import com.haiegoo.ucenter.utils.controller.SysAdmEnum;
+import net.sf.json.JSONObject;
+import org.springframework.web.servlet.ModelAndView;
 
 public class Index extends PageAdmController {
 

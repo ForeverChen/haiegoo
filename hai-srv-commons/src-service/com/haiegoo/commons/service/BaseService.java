@@ -1,16 +1,14 @@
 package com.haiegoo.commons.service;
 
-import java.io.Serializable;
-import java.util.Map;
-
+import com.haiegoo.commons.utils.ConvertUtils;
 import net.rubyeye.xmemcached.MemcachedClient;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.context.support.ApplicationObjectSupport;
 
-import com.haiegoo.commons.utils.ConvertUtils;
+import java.io.Serializable;
+import java.util.Map;
 
 /**
  * service基类，主要编写service公共方法

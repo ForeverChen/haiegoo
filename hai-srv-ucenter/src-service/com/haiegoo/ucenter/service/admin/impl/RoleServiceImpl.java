@@ -1,17 +1,5 @@
 package com.haiegoo.ucenter.service.admin.impl;
 
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
-import org.springframework.dao.DuplicateKeyException;
-import org.springframework.orm.ibatis.SqlMapClientCallback;
-import org.springframework.orm.ibatis.SqlMapClientTemplate;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.alibaba.dubbo.rpc.RpcException;
 import com.haiegoo.commons.service.BaseService;
 import com.haiegoo.ucenter.model.admin.Module;
@@ -19,6 +7,16 @@ import com.haiegoo.ucenter.model.admin.Role;
 import com.haiegoo.ucenter.model.admin.RoleModule;
 import com.haiegoo.ucenter.service.admin.RoleService;
 import com.ibatis.sqlmap.client.SqlMapExecutor;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.orm.ibatis.SqlMapClientCallback;
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 后台角色服务类

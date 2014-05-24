@@ -1,15 +1,13 @@
 package com.haiegoo.ucenter.utils.security.adm;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
+import com.haiegoo.ucenter.service.admin.AdminService;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.web.FilterInvocation;
 
-import com.haiegoo.ucenter.service.admin.AdminService;
+import javax.annotation.Resource;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * 此类在初始化时，应该取到所有资源及其对应角色的定义

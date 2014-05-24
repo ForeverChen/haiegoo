@@ -1,21 +1,18 @@
 package com.haiegoo.ass.web.user;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
-
-import javax.annotation.Resource;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
-import org.springframework.web.servlet.ModelAndView;
-
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.ucenter.model.user.City;
 import com.haiegoo.ucenter.service.user.CityService;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 public class SysCity extends PageAdmController {
 	

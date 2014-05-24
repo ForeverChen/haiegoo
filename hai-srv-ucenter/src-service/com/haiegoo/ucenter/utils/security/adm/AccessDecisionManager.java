@@ -1,16 +1,15 @@
 package com.haiegoo.ucenter.utils.security.adm;
 
-import java.util.Collection;
-import java.util.List;
-
+import com.haiegoo.ucenter.model.admin.Admin;
+import com.haiegoo.ucenter.model.admin.Role;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.authentication.InsufficientAuthenticationException;
 import org.springframework.security.core.Authentication;
 
-import com.haiegoo.ucenter.model.admin.Admin;
-import com.haiegoo.ucenter.model.admin.Role;
+import java.util.Collection;
+import java.util.List;
 
 public class AccessDecisionManager implements org.springframework.security.access.AccessDecisionManager {
 

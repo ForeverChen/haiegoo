@@ -1,11 +1,11 @@
 package com.haiegoo.framework.web.wrapper;
 
+import net.rubyeye.xmemcached.MemcachedClient;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpSession;
-
-import net.rubyeye.xmemcached.MemcachedClient;
 
 /**
  * Memcached request 装饰类

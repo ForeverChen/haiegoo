@@ -1,11 +1,11 @@
 package com.haiegoo.ucenter.utils.controller;
 
-import java.util.Map.Entry;
-import java.util.Properties;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
+import com.haiegoo.commons.service.config.EnumsService;
+import com.haiegoo.framework.web.HttpServletExtendRequest;
+import com.haiegoo.framework.web.HttpServletExtendResponse;
+import com.haiegoo.framework.web.controller.BaseController;
+import com.haiegoo.ucenter.model.user.User;
+import com.haiegoo.ucenter.service.user.UserService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
@@ -14,12 +14,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.haiegoo.commons.service.config.EnumsService;
-import com.haiegoo.framework.web.HttpServletExtendRequest;
-import com.haiegoo.framework.web.HttpServletExtendResponse;
-import com.haiegoo.framework.web.controller.BaseController;
-import com.haiegoo.ucenter.model.user.User;
-import com.haiegoo.ucenter.service.user.UserService;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map.Entry;
+import java.util.Properties;
 
 /**
  * 页面MVC控制层基类，主要编写业务公共方法

@@ -1,23 +1,5 @@
 package com.haiegoo.ucenter.utils.controller;
 
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.Properties;
-
-import javax.annotation.Resource;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.context.ApplicationContext;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.alibaba.dubbo.rpc.RpcException;
 import com.haiegoo.framework.utils.TreeRecursiveHandle;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
@@ -28,6 +10,21 @@ import com.haiegoo.ucenter.model.admin.Module;
 import com.haiegoo.ucenter.service.admin.AdminService;
 import com.haiegoo.ucenter.service.admin.ModuleService;
 import com.haiegoo.ucenter.service.admin.RoleService;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.context.ApplicationContext;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.Properties;
 
 /**
  * 页面MVC控制层基类，主要编写业务公共方法

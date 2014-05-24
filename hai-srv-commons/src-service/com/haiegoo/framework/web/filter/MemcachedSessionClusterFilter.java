@@ -1,19 +1,16 @@
 package com.haiegoo.framework.web.filter;
 
-import java.io.IOException;
+import com.haiegoo.framework.web.wrapper.MemcachedHttpServletRequestWrapper;
+import net.rubyeye.xmemcached.MemcachedClient;
+import org.springframework.web.context.ContextLoader;
+import org.springframework.web.filter.GenericFilterBean;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-
-import net.rubyeye.xmemcached.MemcachedClient;
-
-import org.springframework.web.context.ContextLoader;
-import org.springframework.web.filter.GenericFilterBean;
-
-import com.haiegoo.framework.web.wrapper.MemcachedHttpServletRequestWrapper;
+import java.io.IOException;
 
 /**
  * Memcached集群拦截器
