@@ -1,4 +1,4 @@
-package com.haiegoo.framework.velocity.directive;
+package com.haiegoo.commons.utils.velocity.directive;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

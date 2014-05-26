@@ -1,4 +1,4 @@
-package com.haiegoo.framework.velocity.directive;
+package com.haiegoo.commons.utils.velocity.directive;
 
 import net.rubyeye.xmemcached.MemcachedClient;
 import org.apache.oro.util.Cache;
