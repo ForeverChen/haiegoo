@@ -4,7 +4,7 @@ import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
 import com.haiegoo.ucenter.model.admin.Admin;
 import com.haiegoo.ucenter.utils.controller.PageAdmController;
-import com.haiegoo.ucenter.utils.controller.SysAdmEnum;
+import com.haiegoo.ucenter.enums.SysAdmEnum;
 import net.sf.json.JSONObject;
 import org.springframework.web.servlet.ModelAndView;
 

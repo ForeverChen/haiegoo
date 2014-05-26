@@ -1,6 +1,7 @@
 package com.haiegoo.ucenter.utils.controller;
 
 import com.alibaba.dubbo.rpc.RpcException;
+import com.haiegoo.ucenter.enums.SysAdmEnum;
 import com.haiegoo.framework.utils.TreeRecursiveHandle;
 import com.haiegoo.framework.web.HttpServletExtendRequest;
 import com.haiegoo.framework.web.HttpServletExtendResponse;
