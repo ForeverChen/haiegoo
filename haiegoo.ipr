@@ -628,10 +628,12 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/hai-adm-ass" />
-    <file type="web" url="file://$PROJECT_DIR$/hai-adm-cas" />
+    <file url="file://$PROJECT_DIR$/hai-adm-ass" />
+    <file url="file://$PROJECT_DIR$/hai-adm-cas" />
+    <file url="file://$PROJECT_DIR$/hai-adm-shopmng/src" />
+    <file url="file://$PROJECT_DIR$/hai-oauth" />
+    <file url="file://$PROJECT_DIR$/haiegoo/src" />
     <file type="web" url="file://$PROJECT_DIR$/hai-adm-shopmng" />
-    <file type="web" url="file://$PROJECT_DIR$/hai-oauth" />
     <file type="web" url="file://$PROJECT_DIR$/hai-solr" />
     <file type="web" url="file://$PROJECT_DIR$/haiegoo" />
   </component>
