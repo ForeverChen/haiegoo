@@ -421,9 +421,6 @@
 			<version>${spring.version}</version>
 			<scope>test</scope>
 		</dependency>
-
-
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -454,6 +451,5 @@
             <version>${servlet.version}</version>
             <scope>provided</scope>
         </dependency>
-
 	</dependencies>
 </project>
