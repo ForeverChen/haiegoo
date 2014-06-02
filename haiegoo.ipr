@@ -620,6 +620,21 @@
     </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
+  <component name="DataSourceManagerImpl" format="xml" hash="3535397904">
+    <data-source source="LOCAL" name="MySQL - @haiegoo.com" uuid="c3425bb1-f5e6-4255-9188-4ea74b71be0e">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://haiegoo.com:3306</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc7dfccdfc1dfc0dfcfdfd9dfc1</user-password>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>

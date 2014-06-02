@@ -1,4 +1,6 @@
 *.class
+*.iws
+*.ids
 
 # Package Files #
 *.war
