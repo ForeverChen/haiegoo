@@ -837,7 +837,6 @@
       <module fileurl="file://$PROJECT_DIR$/hai-srv-shopping/hai-srv-shopping.iml" filepath="$PROJECT_DIR$/hai-srv-shopping/hai-srv-shopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/hai-srv-ucenter/hai-srv-ucenter.iml" filepath="$PROJECT_DIR$/hai-srv-ucenter/hai-srv-ucenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/haiegoo/haiegoo.iml" filepath="$PROJECT_DIR$/haiegoo/haiegoo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/huodong/huodong.iml" filepath="$PROJECT_DIR$/huodong/huodong.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="JDK1.6" project-jdk-type="JavaSDK">
@@ -847,19 +846,6 @@
     <mapping directory="" vcs="Git" />
   </component>
   <component name="libraryTable">
-    <library name="huodong node_modules" type="javaScript">
-      <properties>
-        <option name="frameworkName" value="node_modules" />
-        <sourceFilesUrls>
-          <item url="file://$PROJECT_DIR$/huodong/node_modules" />
-        </sourceFilesUrls>
-      </properties>
-      <CLASSES>
-        <root url="file://$PROJECT_DIR$/huodong/node_modules" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
     <library name="Maven: ant:ant:1.6.5">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/ant/ant/1.6.5/ant-1.6.5.jar!/" />
