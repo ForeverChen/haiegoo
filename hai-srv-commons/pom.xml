@@ -25,7 +25,7 @@
 		<aspectj.version>1.7.2</aspectj.version>
 		<quartz.version>1.6.1</quartz.version>
 		<json-lib.version>2.4</json-lib.version>
-		<commons-io.version>2.4</commons-io.version>
+		<commons-io.version>2.7</commons-io.version>
 		<commons-codec.version>1.7</commons-codec.version>
 		<commons-fileupload.version>1.2.2</commons-fileupload.version>
 		<log4j.version>1.2.16</log4j.version>
